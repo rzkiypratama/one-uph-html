@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-image: url('/assets/bg-hero.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+}
+
+.uphlogo {
+    width: 120px;
+}
+
+.card-container {
+    width: 90%;
+    height: 515px;
+    border-radius: 12px;
+}
+
+.card-box {
+    margin-right: -6rem;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+.badge {
+    padding: 10px 20px;
+    background-color: #DFE9FF;
+    color: #407BFF;
+}
+
+/* .box-item {
+    height: 500px;
+    align-items: center;
+} */
+
+/* CARD CONTENT */
+
+.left-content {
+    width: 26rem;
+}
+
+.left-content p {
+    font-weight: 700;
+    color: #7aa3ff;
+}
+
+.left-content h3 {
+    font-size: 2.25rem /* 36px */;
+    line-height: 3rem /* 40px */;
+    font-weight: 600;
+    color: #112369;
+}
+
+.left-content .children {
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
+    color: #989898;
+    font-weight: 400;
+}
+
+hr.solid {
+    border-top: 3px solid #407BFF;
+    width: 70px;
+  }
+
+/* index.html */
+.homepage-container {
+    gap: 10rem !important;
+}
+
+.graduate-logo {
+    width: 208px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-login {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+.welcome-login {
+    font-weight: 500;
+    color: white;
+}
+
+.card-login {
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px !important;
+}
+
+.card-login:hover {
+    transform: translate(3px, 0px);
+    transition: 0.5s ease-in-out 0s;
+}
+
+.card-title {
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #112369;
+}
+
+.card-text {
+    font-size: 14px /* 20px */;
+    line-height: 1.2rem;
+    color: #989898;
+    margin-right: 7rem;
+}
+
+.icon-login {
+    width: 40px;
+}
+
+/* NATIONALITY */
+.card-nationality {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.05em;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    background-position: center;
+  }
+
+  .gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+  }
+
+  .dimmed {
+    filter: brightness(50%);
+  }
+
+  .title-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+  }
+
+  .icon {
+    width: 120px;
+    height: 96px;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 1.25rem; /* text-xl */
+    width: 160px; /* w-40 */
+  }
+
+  .card-nationality .gradient-overlay:hover {
+    background-image: linear-gradient(to top, #BCD1FF, #f1f1f122);
+  }
+
+  .card-nationality .title:hover {
+    color: white;
+  }
+
+  /* CAMPUS */
+.campus-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      ". ."
+      ". ."
+      ". ."; 
+}
