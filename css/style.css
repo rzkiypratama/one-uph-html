@@ -40,6 +40,10 @@ body {
     height: min-content;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* CARD CONTENT */
 
 .left-content {
