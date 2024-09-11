@@ -44,6 +44,18 @@ a {
     text-decoration: none;
 }
 
+hr.full-width {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #BCD1FF;
+    width: 100%;
+}
+
+.full-width-hr-wrapper {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
 /* CARD CONTENT */
 
 .left-content {
