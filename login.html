@@ -31,28 +31,30 @@
                 </div>
                 
                 <!-- Email Address Input -->
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                </div>
-    
-                <!-- Password Input with Show/Hide Eye Icon -->
-                <div class="mb-3 position-relative">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
-                    <i class="bi bi-eye-slash eye-icon" id="togglePassword"></i>
-                </div>
-    
-                <!-- Forgot Password Link -->
-                <div class="mb-3 text-end">
-                    <a href="#" class="forgot-password fst-italic">Forgot Password?</a>
-                </div>
-    
-                <!-- Sign In Button -->
-                <div class="d-grid mb-3">
-                    <button class="btn btn-signin">Sign In</button>
-                </div>
-                <p class="text-center register">Don’t have an account yet? <a href="/nationality.html" class="register-link">Register</a></p>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+        
+                    <!-- Password Input with Show/Hide Eye Icon -->
+                    <div class="mb-3 position-relative">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        <i class="bi bi-eye-slash eye-icon" id="togglePassword"></i>
+                    </div>
+        
+                    <!-- Forgot Password Link -->
+                    <div class="mb-3 text-end">
+                        <a href="#" class="forgot-password fst-italic">Forgot Password?</a>
+                    </div>
+        
+                    <!-- Sign In Button -->
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-signin">Sign In</button>
+                    </div>
+                    <p class="text-center register">Don’t have an account yet? <a href="/nationality.html" class="register-link">Register</a></p>
+                </form>
             </div>
         </div>
 
