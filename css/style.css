@@ -333,3 +333,42 @@ p.form-label-review {
 .modal-body-review {
     padding: 2rem;
 }
+
+/* LOGINPAGE */
+
+.eye-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.btn-signin {
+    background-color: #407BFF;
+    color: #FFF;
+    font-weight: 600;
+    padding: 8px 0px;
+}
+
+.btn-signin:hover {
+    background-color: #407BFF;
+    color: #FFF;
+}
+
+a.forgot-password {
+    font-family: "Work Sans", sans-serif;
+    color: #A3A3A3;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.register {
+    font-family: "Work Sans", sans-serif;
+    color: #A3A3A3;
+    font-size: 14px;
+}
+.register-link {
+    text-decoration: underline;
+    color: #A3A3A3;
+    font-weight: 600;
+ }
