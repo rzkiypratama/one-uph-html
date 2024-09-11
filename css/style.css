@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     background-image: url('/assets/bg-hero.webp');
@@ -17,6 +20,10 @@ body {
     border-radius: 12px;
 }
 
+.card-container-review {
+    width: 100%;
+}
+
 .card-box {
     margin-right: -6rem;
 }
@@ -29,17 +36,18 @@ body {
     padding: 10px 20px;
     background-color: #DFE9FF;
     color: #407BFF;
+    width: min-content;
+    height: min-content;
 }
-
-/* .box-item {
-    height: 500px;
-    align-items: center;
-} */
 
 /* CARD CONTENT */
 
 .left-content {
     width: 26rem;
+}
+
+.form-information {
+    width: 20%;
 }
 
 .left-content p {
@@ -64,6 +72,16 @@ body {
 hr.solid {
     border-top: 3px solid #407BFF;
     width: 70px;
+  }
+
+hr.solid-modal {
+    border-top: 1px solid #BCD1FF;
+    /* width: 70px; */
+  }
+
+hr.solid-review {
+    border-top: 3px solid #BCD1FF;
+    margin: 0;
   }
 
 /* index.html */
@@ -131,6 +149,10 @@ hr.solid {
     background-position: center;
   }
 
+  .card-nationality:hover {
+    transform: scale(1.05);
+  }
+
   .gradient-overlay {
     position: absolute;
     inset: 0;
@@ -178,4 +200,132 @@ hr.solid {
       ". ."
       ". ."
       ". ."; 
+}
+
+/* PROGRAM.html */
+.select-program-btn {
+    background-color: #FF5351;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+
+.back-program-btn {
+    color: #FF5351;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.back-program-btn:hover {
+    color: #FF5351;
+}
+
+.select-program-btn:hover {
+    background-color: #FF535199;
+    color: white;
+}
+
+/* MODAL INSIDE PROGRAM.html */
+.program-title {
+    font-size: 26px;
+    color: #112369;
+}
+
+.program-description {
+    font-family: "Open Sans", sans-serif;
+    color: #231F20;
+}
+
+.program-subtitle {
+    font-weight: 700;
+    color: #264A99;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sub-program {
+    text-transform: capitalize;
+    color: #33363F;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-flow: row; /
+}
+
+/* PERSONALINFORMATION.HTML */
+
+.form-label {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5C5C5C;
+    font-size: 12px;
+}
+
+.form-control, .form-select {
+    border: none;
+    border-bottom: 2px solid #D3D3D3;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: none;
+    border-bottom-color: #007bff;
+}
+
+/* REVIEW.html */
+
+p.form-label-review {
+    margin: 0;
+}
+
+.form-control-review {
+    border: none;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+}
+
+.form-label-review {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #264A99;
+    font-size: 12px;
+}
+
+.back-review-btn {
+    color: #7AA3FF;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.back-review-btn:hover {
+    color: #7AA3FF99;
+}
+
+.review-modal-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #264A99;
+    font-size: 20px;
+}
+
+.review-modal-subtitle {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #999999;
+    font-size: 12px;
+}
+
+.modal-body-review {
+    padding: 2rem;
 }
