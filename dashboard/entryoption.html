@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Entry Option</title>
+</head>
+
+<body class="container">
+    <div class="d-flex justify-content-between align-items-center pt-3 mb-5">
+        <img src="/assets/uph-logo.png" alt="logo" class="uphlogo">
+        <p>logout</p>
+    </div>
+
+    <div class="p-5 rounded-3 bg-white">
+        <!-- steps -->
+        <div class="d-flex gap-2 bg-white mb-4">
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">01</p>
+                    <p class="m-0 step-subtitle w-25">Education Background</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="done-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">02</p>
+                    <p class="m-0 step-subtitle w-25">Personal Information</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="done-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">03</p>
+                    <p class="m-0 step-subtitle w-25">Family Background</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="done-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">04</p>
+                    <p class="m-0 step-subtitle w-25">Education Information</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="dashed-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">05</p>
+                    <p class="m-0 step-subtitle w-25">Entry Option</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-bold.png" alt="step" class="step-icon">
+                    <hr class="solid-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">06</p>
+                    <p class="m-0 step-subtitle w-50">Review & Payment</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-normal.png" alt="step" class="step-icon">
+                    <!-- <hr class="solid-step"> -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tabs & Form -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-header tabs-header">
+                <ul class="nav nav-pills card-header-tabs" id="myTab" role="tablist">
+                    <!-- Tab 1 -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1"
+                            type="button" role="tab" aria-controls="tab1" aria-selected="true">
+                            <div class="d-flex">
+                                <img src="/assets/entry-icon.png" alt="icon1" class="tab-icon">
+                                <span class="d-flex flex-column text-start">
+                                    <p class="m-0 tabs-title text-capitalize">Entry Option</p>
+                                    <p class="m-0 tabs-subtitle">your entry information</p>
+                                </span>
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-body">
+                <!-- Form Start -->
+                <form id="myForm">
+                    <div class="tab-content" id="myTabContent">
+                        <!-- Tab Content 2 -->
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                            <div class="row">
+                                <div class="row col-md-12 mb-4">
+                                    <!-- Entry Type -->
+                                    <div class="col-md-4">
+                                        <label for="entryType" class="form-label">Entry Type</label>
+                                        <select id="entryType" class="form-select">
+                                            <option value="option1">option1</option>
+                                            <option value="option2">option2</option>
+                                            <option value="option3">option3</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <!-- College -->
+                                    <div class="col-md-4">
+                                        <label for="collegeType" class="form-label">College</label>
+                                        <select id="collegeType" class="form-select">
+                                            <option value="option1">option1</option>
+                                            <option value="option2">option2</option>
+                                            <option value="option3">option3</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="facultyType" class="form-label">Faculty</label>
+                                        <select id="facultyType" class="form-select">
+                                            <option value="option1">option1</option>
+                                            <option value="option2">option2</option>
+                                            <option value="option3">option3</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row col-md-12">
+                                    <div class="col-md-4">
+                                        <label for="programType" class="form-label">Program</label>
+                                        <select id="programType" class="form-select">
+                                            <option value="option1">option1</option>
+                                            <option value="option2">option2</option>
+                                            <option value="option3">option3</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <!-- class session -->
+                                    <div class="col-md-4">
+                                        <label for="classSession" class="form-label">Class Session</label>
+                                        <select id="classSession" class="form-select">
+                                            <option value="option1">option1</option>
+                                            <option value="option2">option2</option>
+                                            <option value="option3">option3</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <!-- class type -->
+                                    <div class="col-md-4">
+                                        <label for="classType" class="form-label">Class Type</label>
+                                        <select id="classType" class="form-select">
+                                            <option value="option1">option1</option>
+                                            <option value="option2">option2</option>
+                                            <option value="option3">option3</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <label class="form-label">Entry Option</label>
+                                        <div class="radio-btn-group d-flex gap-1">
+                                            <input type="radio" id="regular" name="regular" value="alive"
+                                                checked>
+                                            <label for="regular">Regular</label>
+
+                                            <input type="radio" id="schoolarship" name="schoolarship" value="schoolarship">
+                                            <label for="schoolarship">Schoolarship</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-content-center mb-4 px-4">
+                            <button type="submit" class="btn btn-outline-danger mt-5 float-end rounded-0 px-5"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                                        stroke="#FF5351" />
+                                </svg> Back</button>
+                            <!-- Submit Button -->
+                            <button type="submit"
+                                class="btn btn-danger mt-5 float-end rounded-0 px-5 save-data-dashboard">Save
+                                Data & Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                                        fill="#FFF" />
+                                </svg></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle form submission
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Gather form data 
+            // Please add all data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                middleName: document.getElementById('middleName').value,
+                lastName: document.getElementById('lastName').value,
+            };
+
+            // Log form data to console
+            console.log("Form Data Submitted: ", formData);
+
+            // Reset form after submission
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
