@@ -507,34 +507,41 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Handle form submission
+        // // Handle form submission
+        // document.getElementById('myForm').addEventListener('submit', function (event) {
+        //     event.preventDefault(); // Prevent default form submission
+
+        //     // Gather form data 
+        //     // Please add all data
+        //     const formData = {
+        //         firstName: document.getElementById('firstName').value,
+        //         middleName: document.getElementById('middleName').value,
+        //         lastName: document.getElementById('lastName').value,
+        //         dateOfBirth: document.getElementById('dateOfBirth').value,
+        //         gender: document.getElementById('gender').value,
+        //         citizenship: document.getElementById('citizenship').value,
+        //         passportNumber: document.getElementById('passportNumber').value,
+        //         passportExpired: document.getElementById('passportExpired').value || null,
+        //         single: document.getElementById('single').value || null,
+        //         married: document.getElementById('married').value,
+        //         religion: document.getElementById('religion').value,
+        //     };
+
+        //     // Log form data to console
+        //     console.log("Form Data Submitted: ", formData);
+
+        //     // Reset form after submission
+        //     this.reset();
+
+        //     window.location.href = '/dashboard/familybackground.html';
+        // });
+
         document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
 
-            // Gather form data 
-            // Please add all data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                middleName: document.getElementById('middleName').value,
-                lastName: document.getElementById('lastName').value,
-                dateOfBirth: document.getElementById('dateOfBirth').value,
-                gender: document.getElementById('gender').value,
-                citizenship: document.getElementById('citizenship').value,
-                passportNumber: document.getElementById('passportNumber').value,
-                passportExpired: document.getElementById('passportExpired').value || null,
-                single: document.getElementById('single').value || null,
-                married: document.getElementById('married').value,
-                religion: document.getElementById('religion').value,
-            };
-
-            // Log form data to console
-            console.log("Form Data Submitted: ", formData);
-
-            // Reset form after submission
-            this.reset();
-
-            window.location.href = '/dashboard/familybackground.html';
-        });
+        // Redirect to the next page
+        window.location.href = '/dashboard/familybackground.html';
+    });
     </script>
 </body>
 

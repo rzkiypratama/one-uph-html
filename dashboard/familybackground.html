@@ -225,9 +225,8 @@
                                 <div class="row mb-4">
                                     <!-- First Name -->
                                     <div class="col-md-4 mb-3">
-                                        <label for="firstName" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="firstName" placeholder="First Name"
-                                            required>
+                                        <label for="familyFirstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="famiyFirstName" placeholder="First Name">
                                     </div>
                                     <!-- Middle Name -->
                                     <div class="col-md-4 mb-3">
@@ -305,23 +304,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Handle form submission
         document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
 
-            // Gather form data 
-            // Please add all data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                middleName: document.getElementById('middleName').value,
-                lastName: document.getElementById('lastName').value,
-            };
-
-            // Log form data to console
-            console.log("Form Data Submitted: ", formData);
-
-            // Reset form after submission
-            this.reset();
+        // Redirect to the next page
+        window.location.href = '/dashboard/educationbackground.html';
         });
     </script>
 </body>

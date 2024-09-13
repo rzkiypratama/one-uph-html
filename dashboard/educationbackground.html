@@ -184,23 +184,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Handle form submission
-        document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
+       document.getElementById('myForm').addEventListener('submit', function (event) {
+        event.preventDefault();
 
-            // Gather form data 
-            // Please add all data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                middleName: document.getElementById('middleName').value,
-                lastName: document.getElementById('lastName').value,
-            };
-
-            // Log form data to console
-            console.log("Form Data Submitted: ", formData);
-
-            // Reset form after submission
-            this.reset();
+        // Redirect to the next page
+        window.location.href = '/dashboard/entryoption.html';
         });
     </script>
 </body>
