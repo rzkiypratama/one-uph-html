@@ -67,7 +67,7 @@ hr.solid-step {
     width: 11rem;
 }
 
-hr.doted-step {
+hr.dashed-step {
     margin: 0;
     padding: 0;
     border: 1px dashed #407BFF;
@@ -467,4 +467,84 @@ a.forgot-password {
     font-style: normal;
     color: #4A4A4A;
     font-size: 12px;
+}
+
+/* RADIO BUTTON */
+.radio-btn-group label {
+    cursor: pointer;
+    padding: 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #CACACA;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.radio-btn-group input[type="radio"] {
+    display: none;
+    color: #CACACA;
+}
+
+.radio-btn-group input[type="radio"]:checked+label {
+    background-color: #719DFF;
+    border-color: #719DFF;
+    color: white;
+}
+
+option.select-placeholder {
+    color: #CACACA !important;
+}
+
+.phone-input-group {
+    display: flex;
+    align-items: center;
+}
+
+.phone-input-group select {
+    max-width: 60px;
+    border-radius: 0;
+    margin-right: 5px;
+}
+
+.phone-input-group input {
+    flex-grow: 1;
+    border-left: none;
+    border-radius: 0;
+}
+
+.phone-input-group .input-group-text {
+    border-right: none;
+}
+
+.vertical-hr {
+    border-left: 1px solid #ccc;
+    height: 100%;
+}
+
+.address-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.address-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.vertical-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+.row-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #112369;
+    font-size: 16px;
 }
