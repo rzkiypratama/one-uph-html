@@ -517,6 +517,14 @@
                 firstName: document.getElementById('firstName').value,
                 middleName: document.getElementById('middleName').value,
                 lastName: document.getElementById('lastName').value,
+                dateOfBirth: document.getElementById('dateOfBirth').value,
+                gender: document.getElementById('gender').value,
+                citizenship: document.getElementById('citizenship').value,
+                passportNumber: document.getElementById('passportNumber').value,
+                passportExpired: document.getElementById('passportExpired').value || null,
+                single: document.getElementById('single').value || null,
+                married: document.getElementById('married').value,
+                religion: document.getElementById('religion').value,
             };
 
             // Log form data to console
@@ -524,6 +532,8 @@
 
             // Reset form after submission
             this.reset();
+
+            window.location.href = '/dashboard/familybackground.html';
         });
     </script>
 </body>
