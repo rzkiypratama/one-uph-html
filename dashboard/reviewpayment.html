@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Review & Payment</title>
+
+    <style>
+        .row-title {
+            font-family: "Barlow", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            color: #112369;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div class="d-flex justify-content-between align-items-center pt-3 mb-5">
+        <img src="/assets/uph-logo.png" alt="logo" class="uphlogo">
+        <p>logout</p>
+    </div>
+
+    <div class="p-5 rounded-3 bg-white">
+        <!-- steps -->
+        <div class="d-flex gap-2 bg-white mb-4">
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">01</p>
+                    <p class="m-0 step-subtitle w-25">Intake Year</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="done-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">02</p>
+                    <p class="m-0 step-subtitle w-25">Personal Information</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="done-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">03</p>
+                    <p class="m-0 step-subtitle w-25">Family Background</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="done-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">04</p>
+                    <p class="m-0 step-subtitle w-25">Education Information</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="done-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">05</p>
+                    <p class="m-0 step-subtitle w-25">Entry Option</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
+                    <hr class="dashed-step">
+                </div>
+            </div>
+
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">06</p>
+                    <p class="m-0 step-subtitle w-50">Review & Payment</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-bold.png" alt="step" class="step-icon">
+                    <!-- <hr class="solid-step"> -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tabs & Form -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-header tabs-header">
+                <ul class="nav nav-pills card-header-tabs" id="myTab" role="tablist">
+                    <!-- Tab 1 -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1"
+                            type="button" role="tab" aria-controls="tab1" aria-selected="true">
+                            <div class="d-flex">
+                                <img src="/assets/parent-icon.png" alt="icon1" class="tab-icon">
+                                <span class="d-flex flex-column text-start">
+                                    <p class="m-0 tabs-title text-capitalize">Parents Information</p>
+                                    <p class="m-0 tabs-subtitle">your parent information</p>
+                                </span>
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-body">
+                <!-- Form Start -->
+                <form id="myForm">
+                    <div class="tab-content" id="myTabContent">
+
+                        <!-- Tab Content 1 -->
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                            <div class="row address-container">
+                                <div class="col-md-5 address-column">
+                                    <h3 class="row-title">Review your Application</h3>
+
+                                    <hr class="full-width my-3">
+
+                                    <div class="d-flex justify-content-between text-capitalize mb-2">
+                                        <p class="m-0 payment-title">program</p>
+                                        <p class="m-0 payment-subtitle ">Architecture</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between text-capitalize mb-2">
+                                        <p class="m-0 payment-title">study level</p>
+                                        <p class="m-0 payment-subtitle ">undergraduate (S1)</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between text-capitalize mb-2">
+                                        <p class="m-0 payment-title">campus</p>
+                                        <p class="m-0 payment-subtitle ">lippo village campus</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between text-capitalize mb-2">
+                                        <p class="m-0 payment-title">intake year</p>
+                                        <p class="m-0 payment-subtitle ">Odd Semester 2024/2025</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between text-capitalize mb-2">
+                                        <p class="m-0 payment-title">Class Session</p>
+                                        <p class="m-0 payment-subtitle ">Morning</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between text-capitalize mb-2">
+                                        <p class="m-0 payment-title">Class Type</p>
+                                        <p class="m-0 payment-subtitle ">Weekdays</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between text-capitalize mb-2">
+                                        <p class="m-0 payment-title">Entry Type</p>
+                                        <p class="m-0 payment-subtitle ">Direct Admission</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between text-capitalize mb-2">
+                                        <p class="m-0 payment-title">Entry Option</p>
+                                        <p class="m-0 payment-subtitle ">Regular</p>
+                                    </div>
+                                </div>
+
+                                <!-- Application Card -->
+                                <div class="col-md-5 address-column">
+                                    <div class="p-3 application-bg">
+                                        <h3 class="row-title">Application Fees</h3>
+
+                                        <hr class="full-width my-3">
+
+                                        <div class="d-flex justify-content-between text-capitalize">
+                                            <p class="m-0 payment-title">Application Form Fee</p>
+                                            <p class="m-0 payment-subtitle">IDR 400.000</p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between text-capitalize my-2">
+                                            <p class="m-0 payment-title">Administration Fee</p>
+                                            <p class="m-0 payment-subtitle">IDR 20.000</p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between text-capitalize">
+                                            <p class="m-0 payment-title">Discount</p>
+                                            <p class="m-0 payment-subtitle">-</p>
+                                        </div>
+
+                                        <hr class="full-width my-3">
+
+                                        <div class="d-flex justify-content-between text-capitalize">
+                                            <p class="m-0 text-capitalize payment-total-title">Total Fee</p>
+                                            <p class="m-0 text-capitalize payment-total-title">IDR 420.000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-content-center mb-4 px-4">
+                            <button type="submit" class="btn btn-outline-danger mt-5 float-end rounded-0 px-5"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                                        stroke="#FF5351" />
+                                </svg> Back</button>
+                            <!-- Submit Button -->
+                            <button type="submit"
+                                class="btn btn-danger mt-5 float-end rounded-0 px-5 save-data-dashboard">Proceed to Payment <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                                        fill="#FFF" />
+                                </svg></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Redirect to the next page
+            // window.location.href = '/dashboard/educationbackground.html';
+        });
+    </script>
+</body>
+
+</html>
