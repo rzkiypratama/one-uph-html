@@ -14,6 +14,10 @@ body {
     width: 120px;
 }
 
+.uphlogotest {
+    width: 120px;
+}
+
 .card-container {
     width: 90%;
     height: 515px;
@@ -57,6 +61,11 @@ hr.full-width {
 
 .full-width-hr-wrapper {
     margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+.full-width-hr-wrapper-form {
+    margin-left: -3rem;
     margin-right: -1.5rem;
 }
 
@@ -547,4 +556,127 @@ option.select-placeholder {
     font-style: normal;
     color: #112369;
     font-size: 16px;
+}
+
+/* review and payment */
+
+.payment-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #4A4A4A;
+    font-size: 14px;
+}
+
+.payment-subtitle {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #4A4A4A;
+    font-size: 14px;
+}
+
+.payment-total-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #4A4A4A;
+    font-size: 18px;
+}
+
+.application-bg {
+    background-color: #C0D4FF20;
+}
+
+/* DASHBOARD */
+
+.dashboard-container {
+    width: 90%;
+    height: 530px;
+    border-radius: 12px;
+}
+
+.dashboard-box {
+    margin-right: -6rem;
+    margin-top: 1rem;
+}
+
+.icon-form {
+    width: 70px;
+}
+
+.dashboard-welcome {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #112369;
+    font-size: 20px;
+}
+
+.dashboard-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #112369;
+}
+
+.dashboard-subtitle {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #3c3c3c;
+    font-size: 16px;
+}
+
+.dashboard-username {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #112369;
+    margin: 0;
+}
+
+.dashboard-id {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7AA3FF;
+    margin: 0;
+}
+
+.dashboard-bottom-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #112369;
+    margin: 0;
+}
+
+.dashboard-edit {
+    border: 1px solid #7AA3FF;
+    color: #719DFF;
+}
+
+.card-dashboard {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.05em;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    background-position: center;
+  }
+
+.dashboard-button {
+    background-image: linear-gradient(to bottom, #FF5351, #FF7A78);
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.badge-icon {
+    width: 40px;
 }

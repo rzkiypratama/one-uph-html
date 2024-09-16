@@ -7,6 +7,55 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <title>Entry Option</title>
+
+    <style>
+        .modal-entry-title {
+            font-family: "Barlow", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            color: #264499;
+            font-size: 20px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-body {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .modal-body p {
+            font-family: "Open Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.5rem;
+            color: #757575;
+        }
+
+        .custom-close {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            border: 1px solid #fff;
+            background: none;
+            font-size: 2rem;
+            color: red;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .custom-close:hover {
+            color: red;
+        }
+    </style>
 </head>
 
 <body class="container">
@@ -21,7 +70,7 @@
             <div>
                 <div class="d-flex gap-2 mb-3">
                     <p class="m-0 step-title">01</p>
-                    <p class="m-0 step-subtitle w-25">Education Background</p>
+                    <p class="m-0 step-subtitle w-25">Intake Year</p>
                 </div>
                 <div class="d-flex align-items-center gap-2">
                     <img src="/assets/circle-done.png" alt="step" class="step-icon">
@@ -178,11 +227,11 @@
                                     <div class="col-md-4 mt-4">
                                         <label class="form-label">Entry Option</label>
                                         <div class="radio-btn-group d-flex gap-1">
-                                            <input type="radio" id="regular" name="regular" value="alive"
-                                                checked>
+                                            <input type="radio" id="regular" name="entryOptions" value="alive" checked>
                                             <label for="regular">Regular</label>
 
-                                            <input type="radio" id="schoolarship" name="schoolarship" value="schoolarship">
+                                            <input type="radio" id="schoolarship" name="entryOptions"
+                                                value="schoolarship">
                                             <label for="schoolarship">Schoolarship</label>
                                         </div>
                                     </div>
@@ -198,8 +247,9 @@
                                         stroke="#FF5351" />
                                 </svg> Back</button>
                             <!-- Submit Button -->
-                            <button type="submit"
-                                class="btn btn-danger mt-5 float-end rounded-0 px-5 save-data-dashboard">Save
+                            <button type="button"
+                                class="btn btn-danger mt-5 float-end rounded-0 px-5 save-data-dashboard"
+                                data-bs-toggle="modal" data-bs-target="#admissionModal">Save
                                 Data & Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -208,32 +258,106 @@
                                 </svg></button>
                         </div>
                     </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="admissionModal" tabindex="-1" aria-labelledby="admissionModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Custom close button (top left) -->
+                                <img src="/assets/close.webp"
+                                    class="custom-close"
+                                    data-bs-dismiss="modal" aria-label="Close"></img>
+
+                                <!-- Modal Header -->
+                                <div class="modal-header d-flex">
+                                    <img src="/assets/uph-logo.png" style="width: 148px;" alt="Logo" class="img-fluid">
+                                    <div>
+                                        <h3 class="modal-entry-title">Admission Statement</h3>
+                                        <p class="m-0 float-end review-modal-subtitle">Academic Year 2004/2005</p>
+                                    </div>
+                                </div>
+
+                                <!-- Modal Body -->
+                                <div class="modal-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                                        incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex
+                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                        esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt
+                                        mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                        reprehenderit in voluptate velit
+                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        non proident, sunt in culpa
+                                        qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+
+                                <!-- Modal Footer -->
+                                <div class="modal-footer">
+                                    <div class="d-flex flex-column text-center align-items-center gap-3 w-100">
+                                        <div>
+                                            <input type="checkbox" id="agreeCheckbox"> <label for="agreeCheckbox"
+                                                class="tabs-subtitle">I agree with this admission
+                                                statement</label>
+                                        </div>
+                                        <button type="button" class="btn btn-primary px-5 rounded-0" id="submitBtn"
+                                            disabled>Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
                 </form>
             </div>
         </div>
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Handle form submission
-        document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            // Prevent default form submission
+            const form = document.getElementById('myForm');
 
-            // Gather form data 
-            // Please add all data
+            // Gather form data
             const formData = {
-                firstName: document.getElementById('firstName').value,
-                middleName: document.getElementById('middleName').value,
-                lastName: document.getElementById('lastName').value,
+                entryType: document.getElementById('entryType').value,
+                collegeType: document.getElementById('collegeType').value,
+                facultyType: document.getElementById('facultyType').value,
+                // Add other form fields here
             };
 
             // Log form data to console
             console.log("Form Data Submitted: ", formData);
 
             // Reset form after submission
-            this.reset();
+            form.reset();
+
+            // Redirect to the next page
+            window.location.href = '/dashboard/reviewpayment.html';
         });
+
+        const checkbox = document.getElementById('agreeCheckbox');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Enable button when checkbox is checked
+        checkbox.addEventListener('change', function () {
+            submitBtn.disabled = !checkbox.checked;
+        });
+    </script>
     </script>
 </body>
 
