@@ -28,7 +28,7 @@
             overflow-y: auto;
         }
 
-        .modal-body p {
+        .first-modal-p {
             font-family: "Open Sans", sans-serif;
             font-size: 12px;
             font-weight: 600;
@@ -55,13 +55,24 @@
         .custom-close:hover {
             color: red;
         }
+
+        .admisison-icon {
+            width: 42px;
+            height: 54px;
+        }
     </style>
 </head>
 
 <body class="container">
     <div class="d-flex justify-content-between align-items-center pt-3 mb-5">
         <img src="/assets/uph-logo.png" alt="logo" class="uphlogo">
-        <p>logout</p>
+        <div class="d-flex gap-3 align-items-center">
+            <span class="logout-button d-flex align-items-center gap-2">
+                <p class="m-0">dashboard</p>
+                <!-- <img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon"> -->
+            </span>
+            <img src="/assets/bells.png" alt="notification icon" class="notification-icon">
+        </div>
     </div>
 
     <div class="p-5 rounded-3 bg-white">
@@ -227,13 +238,25 @@
                                     <div class="col-md-4 mt-4">
                                         <label class="form-label">Entry Option</label>
                                         <div class="radio-btn-group d-flex gap-1">
-                                            <input type="radio" id="regular" name="entryOptions" value="alive" checked>
+                                            <input type="radio" id="regular" name="entryOptions" value="regular"
+                                                checked>
                                             <label for="regular">Regular</label>
 
-                                            <input type="radio" id="schoolarship" name="entryOptions"
+                                            <input type="radio" id="schoolarshipRadio" name="entryOptions"
                                                 value="schoolarship">
-                                            <label for="schoolarship">Schoolarship</label>
+                                            <label for="schoolarshipRadio">Schoolarship</label>
                                         </div>
+                                    </div>
+
+                                    <!-- Schoolarship Input -->
+                                    <div class="col-md-4 mt-4" id="schoolarshipInput" style="display: none;">
+                                        <label for="schoolarshipType" class="form-label">Schoolarship Type</label>
+                                        <select id="schoolarshipType" class="form-select">
+                                            <option value="option1">option1</option>
+                                            <option value="option2">option2</option>
+                                            <option value="option3">option3</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -266,9 +289,8 @@
                             <div class="modal-content">
 
                                 <!-- Custom close button (top left) -->
-                                <img src="/assets/close.webp"
-                                    class="custom-close"
-                                    data-bs-dismiss="modal" aria-label="Close"></img>
+                                <img src="/assets/close.webp" class="custom-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></img>
 
                                 <!-- Modal Header -->
                                 <div class="modal-header d-flex">
@@ -281,7 +303,7 @@
 
                                 <!-- Modal Body -->
                                 <div class="modal-body">
-                                    <p>
+                                    <p class="first-modal-p">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
                                         incididunt ut labore et
                                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -310,8 +332,9 @@
                                                 class="tabs-subtitle">I agree with this admission
                                                 statement</label>
                                         </div>
-                                        <button type="button" class="btn btn-primary px-5 rounded-0" id="submitBtn"
-                                            disabled>Submit</button>
+                                        <button type="button" class="btn btn-primary px-5 rounded-0"
+                                            data-bs-target="#confirmationModal" data-bs-toggle="modal"
+                                            id="submitFirstModal" disabled>Submit</button>
                                     </div>
                                 </div>
 
@@ -319,7 +342,60 @@
                         </div>
                     </div>
 
+                    <!-- Modal 2 -->
+                    <div class="modal fade" id="confirmationModal" tabindex="-1"
+                        aria-labelledby="confirmationModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <!-- Modal Body -->
+                                <div class="modal-body">
+                                    <div
+                                        class="text-center d-flex flex-column justify-content-center align-content-center align-items-center">
+                                        <img src="/assets/admission-icon.png" alt="admission icon"
+                                            class="admisison-icon mb-3">
+                                        <p class="m-0 review-modal-title testing">Admission Statement Confirmation</p>
+                                        <p class="m-0 review-modal-subtitle">I hereby declare that I have read and
+                                            understood the Admission Statement, UPH
+                                            Application, and admission requirements in their entirety. I fully agree to
+                                            comply with and adhere to every rule applicable at UPH. I am willing to
+                                            accept
+                                            the sanctions imposed in case of any violation.</p>
+                                    </div>
+                                    <hr class="solid-modal">
+                                    <div class="row px-3">
+                                        <span class="col-md-6 payment-title">
+                                            Name
+                                        </span>
+                                        <span class="col-md-6 payment-subtitle">
+                                            Kevin Saputra Siahaan
+                                        </span>
 
+                                        <span class="col-md-6 payment-title">
+                                            NIK/ID Number
+                                        </span>
+                                        <span class="col-md-6 payment-subtitle">
+                                            3656565656565
+                                        </span>
+
+                                        <span class="col-md-6 payment-title">
+                                            Parents Name
+                                        </span>
+                                        <span class="col-md-6 payment-subtitle">
+                                            Bagus Siahaan & Irene Siahaan
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Modal Footer -->
+                                <div class="modal-footer d-flex justify-content-between w-100">
+                                    <button type="button" class="btn btn-outline-danger rounded-0 mx-4 w-25"
+                                        data-bs-dismiss="modal">No</button>
+                                    <button type="button" class="btn btn-danger rounded-0 mx-4 w-25"
+                                        id="submitBtn">Yes!</button>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
                 </form>
             </div>
         </div>
@@ -327,6 +403,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Get the radio buttons and the schoolarship input container
+        const regularRadio = document.getElementById('regular');
+        const schoolarshipRadio = document.getElementById('schoolarshipRadio');
+        const schoolarshipInput = document.getElementById('schoolarshipInput');
+
+        // Function to toggle schoolarship input visibility
+        function toggleSchoolarshipInput() {
+            if (schoolarshipRadio.checked) {
+                schoolarshipInput.style.display = 'block';  // Show if 'schoolarship' is selected
+            } else {
+                schoolarshipInput.style.display = 'none';   // Hide if 'regular' is selected
+            }
+        }
+
+        // Add event listeners for both radio buttons
+        regularRadio.addEventListener('change', toggleSchoolarshipInput);
+        schoolarshipRadio.addEventListener('change', toggleSchoolarshipInput);
+
+        // Run the function on page load to set the correct initial state
+        toggleSchoolarshipInput();
         // Handle form submission
         document.getElementById('submitBtn').addEventListener('click', function () {
             // Prevent default form submission
@@ -351,7 +447,7 @@
         });
 
         const checkbox = document.getElementById('agreeCheckbox');
-        const submitBtn = document.getElementById('submitBtn');
+        const submitBtn = document.getElementById('submitFirstModal');
 
         // Enable button when checkbox is checked
         checkbox.addEventListener('change', function () {
