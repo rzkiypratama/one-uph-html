@@ -132,6 +132,16 @@
         document.getElementById('personalInfoForm').addEventListener('submit', function (event) {
             event.preventDefault();  // Prevent the default form submission behavior
 
+            // Ambil nilai dari password dan repeat password
+            const password = document.getElementById('password').value;
+            const repeatPassword = document.getElementById('repeatPassword').value;
+
+            // Cek apakah password dan repeat password cocok
+            if (password !== repeatPassword) {
+                alert('Passwords do not match!');  // Menampilkan pesan error jika tidak cocok
+                return;  // Berhenti jika password tidak cocok
+            }
+
             // Collect form data
             const formData = {
                 firstName: document.getElementById('firstName').value,
