@@ -17,11 +17,20 @@
 
         <div class="card card-container p-5">
             <div class="d-flex justify-content-between box-item">
-                <div class="left-content">
-                    <p class="text-uppercase">step 3 of 8</p>
-                    <h3>Which campus are you interested in?</h3>
-                    <p class="children">Choose a campus</p>
-                    <hr class="solid">
+                <div class="d-flex flex-column justify-content-between">
+                    <div class="left-content">
+                        <p class="text-uppercase">step 3 of 8</p>
+                        <h3>On which campus do you intend to study?</h3>
+                        <p class="children">Choose a campus</p>
+                        <hr class="solid">
+                    </div>
+
+                    <div class="divider-items"></div>
+
+                    <span class="d-flex gap-2 align-items-md-center cursor-pointer" role="button" id="backToNationality">
+                        <img src="/assets/left-arrow.png" alt="arrow-left">
+                        <p class="back-button">back to Program Selection</p>
+                    </span>
                 </div>
 
             
@@ -109,6 +118,12 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('backToNationality').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '/studylevel.html';
+        })
+    </script>
 </body>
 
 </html>
