@@ -167,10 +167,10 @@
                                             <div class="col-md-12 mb-4">
                                                 <label class="form-label">Status</label>
                                                 <div class="radio-btn-group d-flex gap-1">
-                                                    <input type="radio" id="aliveMother" name="motherStatus" value="alive"
-                                                        checked>
+                                                    <input type="radio" id="aliveMother" name="motherStatus"
+                                                        value="alive" checked>
                                                     <label for="aliveMother">Alive</label>
-    
+
                                                     <input type="radio" id="deceasedMother" name="motherStatus"
                                                         value="deceased">
                                                     <label for="deceasedMother">Deceased</label>
@@ -179,7 +179,7 @@
                                         </div>
 
                                         <div class="row" id="deceasedInputHide">
-                                            <div class="col-md-6" >
+                                            <div class="col-md-6">
                                                 <label class="form-label">Mobile Phone Number</label>
                                                 <div class="input-group phone-input-group">
                                                     <!-- Select for country code -->
@@ -332,14 +332,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             const aliveRadio = document.getElementById('aliveMother');
             const deceasedRadio = document.getElementById('deceasedMother');
-            const phoneNumberSection = document.getElementById('deceasedInputHide');
+            const deceasedInput = document.getElementById('deceasedInputHide');
 
             // Function to toggle visibility based on status
             function togglePhoneNumberVisibility() {
                 if (deceasedRadio.checked) {
-                    phoneNumberSection.classList.add('hidden');
+                    deceasedInput.classList.add('hidden');
                 } else {
-                    phoneNumberSection.classList.remove('hidden');
+                    deceasedInput.classList.remove('hidden');
                 }
             }
 
