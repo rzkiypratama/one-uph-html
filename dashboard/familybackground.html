@@ -16,6 +16,10 @@
             color: #112369;
             font-size: 16px;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -159,37 +163,43 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12 mb-4">
-                                            <label class="form-label">Status</label>
-                                            <div class="radio-btn-group d-flex gap-1">
-                                                <input type="radio" id="aliveMother" name="motherStatus" value="alive"
-                                                    checked>
-                                                <label for="aliveMother">Alive</label>
+                                        <div class="row">
+                                            <div class="col-md-12 mb-4">
+                                                <label class="form-label">Status</label>
+                                                <div class="radio-btn-group d-flex gap-1">
+                                                    <input type="radio" id="aliveMother" name="motherStatus" value="alive"
+                                                        checked>
+                                                    <label for="aliveMother">Alive</label>
+    
+                                                    <input type="radio" id="deceasedMother" name="motherStatus"
+                                                        value="deceased">
+                                                    <label for="deceasedMother">Deceased</label>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                                <input type="radio" id="deceasedMother" name="motherStatus" value="deceased">
-                                                <label for="deceasedMother">Deceased</label>
+                                        <div class="row" id="deceasedInputHide">
+                                            <div class="col-md-6" >
+                                                <label class="form-label">Mobile Phone Number</label>
+                                                <div class="input-group phone-input-group">
+                                                    <!-- Select for country code -->
+                                                    <select class="form-select" id="countryCode">
+                                                        <option value="+62">+62</option>
+                                                        <option value="+1">+1</option>
+                                                        <option value="+44">+44</option>
+                                                        <option value="+91">+91</option>
+                                                        <!-- Add more country codes as needed -->
+                                                    </select>
+                                                    <!-- Input for whatsapp number -->
+                                                    <input type="tel" class="form-control" id="parentMobileNumber"
+                                                        placeholder="Phone Number">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Mobile Phone Number</label>
-                                            <div class="input-group phone-input-group">
-                                                <!-- Select for country code -->
-                                                <select class="form-select" id="countryCode">
-                                                    <option value="+62">+62</option>
-                                                    <option value="+1">+1</option>
-                                                    <option value="+44">+44</option>
-                                                    <option value="+91">+91</option>
-                                                    <!-- Add more country codes as needed -->
-                                                </select>
-                                                <!-- Input for whatsapp number -->
-                                                <input type="tel" class="form-control" id="parentMobileNumber"
-                                                    placeholder="Phone Number">
+                                            <div class="col-md-6">
+                                                <label for="parentEmail" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="parentEmail"
+                                                    placeholder="Enter your email address">
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="parentEmail" class="form-label">Email Address</label>
-                                            <input type="email" class="form-control" id="parentEmail"
-                                                placeholder="Enter your email address">
                                         </div>
                                     </div>
                                 </div>
@@ -232,7 +242,8 @@
                                     <!-- First Name -->
                                     <div class="col-md-4 mb-3">
                                         <label for="familyFirstName" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="famiyFirstName" placeholder="First Name">
+                                        <input type="text" class="form-control" id="famiyFirstName"
+                                            placeholder="First Name">
                                     </div>
                                     <!-- Middle Name -->
                                     <div class="col-md-4 mb-3">
@@ -311,11 +322,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('myForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+            event.preventDefault();
 
-        // Redirect to the next page
-        window.location.href = '/dashboard/educationbackground.html';
+            // Redirect to the next page
+            window.location.href = '/dashboard/educationbackground.html';
         });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const aliveRadio = document.getElementById('aliveMother');
+            const deceasedRadio = document.getElementById('deceasedMother');
+            const phoneNumberSection = document.getElementById('deceasedInputHide');
+
+            // Function to toggle visibility based on status
+            function togglePhoneNumberVisibility() {
+                if (deceasedRadio.checked) {
+                    phoneNumberSection.classList.add('hidden');
+                } else {
+                    phoneNumberSection.classList.remove('hidden');
+                }
+            }
+
+            // Event listeners for radio buttons
+            aliveRadio.addEventListener('change', togglePhoneNumberVisibility);
+            deceasedRadio.addEventListener('change', togglePhoneNumberVisibility);
+
+            // Initialize the visibility based on the default selection
+            togglePhoneNumberVisibility();
+        });
+
     </script>
 </body>
 
