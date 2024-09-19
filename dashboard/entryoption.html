@@ -9,61 +9,14 @@
     <title>Entry Option</title>
 
     <style>
-        .modal-entry-title {
-            font-family: "Barlow", sans-serif;
-            font-weight: 600;
-            font-style: normal;
-            color: #264499;
-            font-size: 20px;
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
         .modal-body {
-            max-height: 300px;
+            max-height: 350px;
             overflow-y: auto;
-        }
-
-        .first-modal-p {
-            font-family: "Open Sans", sans-serif;
-            font-size: 12px;
-            font-weight: 600;
-            line-height: 1.5rem;
-            color: #757575;
-        }
-
-        .custom-close {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            border: 1px solid #fff;
-            background: none;
-            font-size: 2rem;
-            color: red;
-            border-radius: 100%;
-            width: 30px;
-            height: 30px;
-            background-color: #fff;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .custom-close:hover {
-            color: red;
-        }
-
-        .admisison-icon {
-            width: 42px;
-            height: 54px;
         }
     </style>
 </head>
-
-<body class="container">
+ 
+<body class="container mt-3">
     <div class="d-flex justify-content-between align-items-center pt-3 mb-5">
         <img src="/assets/uph-logo.png" alt="logo" class="uphlogo">
         <div class="d-flex gap-3 align-items-center">
@@ -75,9 +28,9 @@
         </div>
     </div>
 
-    <div class="p-5 rounded-3 bg-white">
+    <div class="p-5 rounded-3 card-main-bg">
         <!-- steps -->
-        <div class="d-flex gap-2 bg-white mb-4">
+        <div class="d-flex gap-2 mb-4">
             <div>
                 <div class="d-flex gap-2 mb-3">
                     <p class="m-0 step-title">01</p>
@@ -168,7 +121,7 @@
 
             <div class="card-body">
                 <!-- Form Start -->
-                <form id="myForm">
+                <form id="myForm" class="d-flex flex-column justify-content-between h-100">
                     <div class="tab-content" id="myTabContent">
                         <!-- Tab Content 2 -->
                         <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
@@ -261,25 +214,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between align-content-center mb-4 px-4">
-                            <button type="submit" class="btn btn-outline-danger mt-5 float-end rounded-0 px-5"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-                                        stroke="#FF5351" />
-                                </svg> Back</button>
-                            <!-- Submit Button -->
-                            <button type="button"
-                                class="btn btn-danger mt-5 float-end rounded-0 px-5 save-data-dashboard"
-                                data-bs-toggle="modal" data-bs-target="#admissionModal">Save
-                                Data & Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-                                        fill="#FFF" />
-                                </svg></button>
-                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-content-center mb-4 px-4">
+                        <button type="submit" class="btn btn-outline-danger mt-5 float-end rounded-0 px-5"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                                    stroke="#FF5351" />
+                            </svg> Back</button>
+                        <!-- Submit Button -->
+                        <button type="button"
+                            class="btn btn-danger mt-5 float-end rounded-0 px-5 danger-button"
+                            data-bs-toggle="modal" data-bs-target="#admissionModal">Save
+                            Data & Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                                    fill="#FFF" />
+                            </svg></button>
                     </div>
 
                     <!-- Modal -->
@@ -395,7 +348,7 @@
                                 </div>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </form>
             </div>
         </div>

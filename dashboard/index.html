@@ -44,10 +44,14 @@
         .proceed-btn {
             margin-top: 20px;
         }
+
+        .modal-content {
+            width: 80% !important;
+        }
     </style>
 </head>
 
-<body class="container mt-5">
+<body class="container mt-3">
     <div class="d-flex justify-content-between align-items-center pt-3 mb-5">
         <img src="/assets/uph-logo.png" alt="logo" class="uphlogo">
         <div class="d-flex gap-3 align-items-center">
@@ -60,15 +64,15 @@
     </div>
 
     <div class="p-5 rounded-3 bg-white dashboard-container">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between align-items-center">
             <div class="w-100 pe-4">
                 <img src="/assets/idcard.png" alt="badge-id" class="badge-icon">
                 <p class="text-capitalize m-0 dashboard-welcome pt-2">welcome</p>
                 <h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
-                <span class="d-flex justify-content-between align-items-center">
+                <span class="d-flex justify-content-between align-items-end">
                     <p class="text-uppercase dashboard-id">ID #123456</p>
                     <button type="button" class="btn btn-outline-primary px-4 dashboard-edit"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor"
                             class="bi bi-pencil" viewBox="0 0 16 16">
                             <path
                                 d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
@@ -124,7 +128,7 @@
 
             <div class="dashboard-box">
                 <div class="card-dashboard border-0"
-                    style="background-image: url('/assets/student.jpeg'); height: 402px; width: 272px;">
+                    style="background-image: url('/assets/student.jpeg'); height: 461px; width: 272px;">
                     <!-- Gradient Overlay -->
                     <div class="gradient-overlay" style="background-image: linear-gradient(to top, #BCD1FF, #f1f1f122);"
                         \>
@@ -148,7 +152,7 @@
             <div class="modal-content">
                 <div class="modal-body d-flex justify-content-between p-5">
                     <!-- Left Side Content -->
-                    <div class="w-50 pe-3 text-center">
+                    <div class="w-50 pe-3 text-center mb-3">
                         <h5 class="review-modal-title">I have an E-code</h5>
                         <p class="m-0 review-modal-subtitle">Please enter your E-code</p>
                         <input type="text" class="form-control e-code-input text-center my-3" id="ecodeInput"
@@ -165,7 +169,7 @@
                     </div>
 
                     <!-- Right Side Content -->
-                    <div class="w-50 ps-3 text-center d-flex flex-column justify-content-between">
+                    <div class="w-50 ps-3 text-center d-flex flex-column justify-content-between mb-3">
                         <div>
                             <h5 class="review-modal-title">I don’t have an E-code</h5>
                             <p class="m-0 review-modal-subtitle">Proceed with your admission process</p>
@@ -186,9 +190,10 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body text-center p-5">
-                    <img src="/assets/success-icon.png" alt="Success Icon">
-                    <h5>You have been Admitted!</h5>
-                    <button type="button" class="btn btn-success proceed-btn" data-bs-toggle="modal" data-bs-target="#firstPaymentModal">Proceed to Payment</button>
+                    <img src="/assets/succes-admitted.png" alt="check-icon" class="mb-1">
+                    <h5 class="success-modal-title mb-1">You have been Admitted!</h5>
+                    <p class="review-modal-subtitle mb-4">Congratulation! You have been automatically admitted. Proceed to payment to complete your application.</p>
+                    <button type="button" class="btn btn-danger danger-button border-0 rounded-0 px-5 py-2" data-bs-toggle="modal" data-bs-target="#firstPaymentModal">Proceed to Payment</button>
                 </div>
             </div>
         </div>
@@ -269,7 +274,7 @@
 
                 <!-- Modal Footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary px-5 rounded-0 w-100 border-0 dashboard-button"
+                    <button type="button" class="btn btn-danger px-5 rounded-0 w-100 border-0 danger-button"
                         data-bs-target="#confirmationModal" data-bs-toggle="modal">Proceed to
                         Payment</button>
                 </div>
@@ -330,7 +335,7 @@
 
                 <!-- Modal Footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary px-5 rounded-0 w-100 border-0 dashboard-button"
+                    <button type="button" class="btn btn-danger px-5 rounded-0 w-100 border-0 danger-button"
                         data-bs-target="#successModal" data-bs-toggle="modal" id="submitFirstModal">Verify
                         Payment</button>
                 </div>
@@ -350,7 +355,7 @@
                     <p class="review-modal-subtitle mb-3">Congratulation! You have finished the payment.
                         Proceed to the next step to complete your application.</p>
                     <button type="button" id="nextStepPayment"
-                        class="btn btn-danger px-5 rounded-0 w-100 border-0 dashboard-button" onclick="window.location.href='/dashboard/intakeyear.html'">Next
+                        class="btn btn-danger px-5 rounded-0 w-100 border-0 danger-button" onclick="window.location.href='/dashboard/intakeyear.html'">Next
                         Step</button>
                 </div>
             </div>
@@ -379,7 +384,7 @@
             const ecode = ecodeInput.value.trim();
 
             // Check if e-code matches '000-000-001' for test unit purpose
-            if (ecode === '000-000-001') {
+            if (ecode === '000-000-000') {
                 successMessage.style.display = 'block';
                 errorMessage.style.display = 'none';
 

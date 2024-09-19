@@ -123,7 +123,7 @@
                 </div>
             </div>
 
-            <span class="d-flex gap-2 align-items-md-center cursor-pointer btn-sign" role="button" id="backToNationality">
+            <span class="d-flex gap-2 align-items-md-center cursor-pointer btn-sign" role="button" id="backToNationality" onclick="window.location.href = '/programmajor.html'">
                 <img src="/assets/left-arrow.png" alt="arrow-left">
                 <p class="back-button p-0">back to Faculty Selection</p>
             </span>
@@ -135,13 +135,13 @@
         data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-body" style="height: max-content;">
                     <div>
                         <div class="w-100">
                             <div class="d-flex gap-4">
                                 <div>
                                     <div class="card-programmodal border-0"
-                                        style="background-image: url('/assets/arcitecture.png'); height: 508px; width: 245px;"
+                                        style="background-image: url('/assets/arcitecture.png'); height: 445px; width: 225px;"
                                         data-bs-toggle="modal" data-bs-target="#modal">
                                         <!-- Gradient Overlay -->
                                         <div class="gradient-overlay"
@@ -173,7 +173,7 @@
                                             <p class="program-subtitle">study duration</p>
                                             <p class="sub-program-top">4 years</p>
                                         </span>
-                                        <span class="col-12 mt-3 w-75">
+                                        <span class="col-12 mt-4 w-75">
                                             <p class="program-subtitle">career opportunities</p>
                                             <ul class="sub-program">
                                                 <li>Architecture Consultant</li>
@@ -223,13 +223,6 @@
 
         myModal.addEventListener('shown.bs.modal', () => {
             myInput.focus()
-        })
-    </script>
-
-    <script>
-        document.getElementById('backToNationality').addEventListener('click', function (event) {
-            event.preventDefault();
-            window.location.href = '/programmajor.html';
         })
     </script>
 </body>

@@ -19,7 +19,7 @@ body {
   color: #d3d3d3 !important;
 }
 
-input {
+input, select {
   padding-left: 10px !important;
 }
 
@@ -48,6 +48,14 @@ p {
 
 .card-box {
   margin-right: -6rem;
+}
+
+.card-main-bg {
+    background-color: #EFF4FF;
+}
+
+.card-body {
+    height: 418px;
 }
 
 .btn-link {
@@ -142,6 +150,24 @@ hr.done-step {
   color: #7aa3ff;
 }
 
+.danger-button {
+  background-color: #ff5351;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 0.75px;
+}
+
+.btn-primary {
+    background-color: #7aa3ff !important;
+    border-color: #7aa3ff !important;
+}
+
+.btn-primary:hover {
+    background-color: #719dff !important;
+}
+
 .divider-item {
   margin-top: 3rem 0rem;
   padding: 6rem 0rem;
@@ -158,7 +184,11 @@ hr.done-step {
 }
 
 .btn-sign {
-    padding-top: 2.3rem;
+  padding-top: 2.3rem;
+}
+
+.hidden {
+  display: none;
 }
 
 /* CARD CONTENT */
@@ -415,6 +445,55 @@ hr.solid-review {
   background-position: center;
 }
 
+/* Entry Option */
+
+.modal-entry-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #264499;
+  font-size: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-modal-p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #757575;
+}
+
+.custom-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border: 1px solid #fff;
+  background: none;
+  font-size: 2rem;
+  color: red;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-close:hover {
+  color: red;
+}
+
+.admisison-icon {
+  width: 42px;
+  height: 54px;
+}
+
 /* PERSONALINFORMATION.HTML */
 
 .form-label {
@@ -423,10 +502,11 @@ hr.solid-review {
   font-style: normal;
   color: #5c5c5c;
   font-size: 12px;
+  letter-spacing: 0.75px;
 }
 
 .form-label-pwd {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .form-control,
@@ -567,7 +647,7 @@ a.forgot-password {
   font-weight: 600;
   font-style: normal;
   color: #112369;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .tabs-subtitle {
@@ -575,7 +655,7 @@ a.forgot-password {
   font-weight: 400;
   font-style: normal;
   color: #5c5c5c;
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
 }
 
@@ -604,8 +684,13 @@ a.forgot-password {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: #4a4a4a;
+  color: #898989;
   font-size: 12px;
+  line-height: normal;
+}
+
+.nav-item {
+  padding-right: 15px !important;
 }
 
 /* RADIO BUTTON */
@@ -803,13 +888,14 @@ input[type="radio"] {
 
 .dashboard-container {
   width: 90%;
-  height: 530px;
+  height: 571px;
   border-radius: 12px;
+  background-color: #EFF4FF !important;
 }
 
 .dashboard-box {
   margin-right: -6rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .icon-form {
@@ -864,8 +950,10 @@ input[type="radio"] {
 }
 
 .dashboard-edit {
-  border: 1px solid #7aa3ff;
+  border: 1px solid #7aa3ff !important;
   color: #719dff;
+  font-size: 14px !important;
+  font-weight: 600;
 }
 
 .card-dashboard {
@@ -886,16 +974,26 @@ input[type="radio"] {
   font-weight: 600;
   font-style: normal;
   font-size: 16px;
-  transition: 0.5s ease-in-out 0s;
+  transition: 0.2s ease-in;
 }
 
 .dashboard-button:hover {
-  background-image: linear-gradient(to top, #ff5351, #ff7a78);
-  transition: 0.5s ease-in-out 0s;
+  transform: scale(1, 1.1);
 }
 
 .badge-icon {
   width: 40px;
+}
+
+.admitted-btn {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0px 10px;
+  background-color: #407bff;
+  color: white;
+  border-radius: 13px;
+  text-transform: uppercase;
 }
 
 .fade-in-right {
