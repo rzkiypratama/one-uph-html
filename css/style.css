@@ -295,6 +295,15 @@ hr.solid-review {
   width: 40px;
 }
 
+.btn-outline-danger {
+  border-color: #ff5351 !important;
+
+}
+.btn-outline-danger:hover {
+  background-color: #ffffff90 !important;
+  color: #ff5351;
+}
+
 /* NATIONALITY */
 .card-nationality {
   position: relative;
