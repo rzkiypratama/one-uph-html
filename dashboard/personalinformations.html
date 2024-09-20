@@ -505,72 +505,112 @@
 
                         <!-- Tab Content 4 -->
                         <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-                            <div class="row address-container">
-                                <!-- Overseas Address Column -->
-                                <div class="col-md-5 address-column">
-                                    <div class="mb-3">
-                                        <label for="overseasAddress" class="form-label">Overseas Address</label>
-                                        <input type="text" class="form-control" id="overseasAddress"
-                                            placeholder="Enter overseas address">
-                                    </div>
-                                    <div class="row my-4">
-                                        <div class="col-md-6">
-                                            <label for="country" class="form-label">Country</label>
-                                            <input type="text" class="form-control" id="country"
-                                                placeholder="Enter Country">
+                            <!-- international role -->
+                            <div id="international-address" class="form-section hidden">
+                                <div class="row address-container">
+                                    <!-- Overseas Address Column -->
+                                    <div class="col-md-5 address-column">
+                                        <div class="mb-3">
+                                            <label for="overseasAddress" class="form-label">Overseas Address</label>
+                                            <input type="text" class="form-control" id="overseasAddress"
+                                                placeholder="Enter overseas address">
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="provinceState" class="form-label">Province or State</label>
-                                            <input type="text" class="form-control" id="provinceState"
-                                                placeholder="Enter Province or State">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="city" class="form-label">City</label>
-                                            <input type="text" class="form-control" id="city" placeholder="Enter City">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="postalCode" class="form-label">Postal Code</label>
-                                            <input type="text" class="form-control" id="postalCode"
-                                                placeholder="Enter Postal Code">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Vertical Divider -->
-                                <div class="col-md-1 vertical-divider">
-                                    <hr class="vertical-hr">
-                                </div>
-
-                                <!-- Indonesian Address Column -->
-                                <div class="col-md-5 address-column">
-                                    <div class="mb-3">
-                                        <label for="indonesianAddress" class="form-label">Indonesian Address</label>
-                                        <input type="text" class="form-control" id="indonesianAddress"
-                                            placeholder="Enter Indonesian address">
                                         <div class="row my-4">
                                             <div class="col-md-6">
-                                                <label for="stateProvinsi" class="form-label">Province or State</label>
-                                                <input type="text" class="form-control" id="stateProvinsi"
-                                                    placeholder="Enter Province or State">
+                                                <label for="country" class="form-label">Country</label>
+                                                <input type="text" class="form-control" id="country"
+                                                    placeholder="Enter Country">
                                             </div>
                                             <div class="col-md-6">
-                                                <label for="kota" class="form-label">City</label>
-                                                <input type="text" class="form-control" id="kota"
-                                                    placeholder="Enter City">
+                                                <label for="provinceState" class="form-label">Province or State</label>
+                                                <input type="text" class="form-control" id="provinceState"
+                                                    placeholder="Enter Province or State">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="kodePos" class="form-label">Postal Code</label>
-                                                <input type="text" class="form-control" id="kodePos"
+                                                <label for="city" class="form-label">City</label>
+                                                <input type="text" class="form-control" id="city"
+                                                    placeholder="Enter City">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="postalCode" class="form-label">Postal Code</label>
+                                                <input type="text" class="form-control" id="postalCode"
                                                     placeholder="Enter Postal Code">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Vertical Divider -->
+                                    <div class="col-md-1 vertical-divider">
+                                        <hr class="vertical-hr">
+                                    </div>
+
+                                    <!-- Indonesian Address Column -->
+                                    <div class="col-md-5 address-column">
+                                        <div class="mb-3">
+                                            <label for="indonesianAddress" class="form-label">Indonesian Address</label>
+                                            <input type="text" class="form-control" id="indonesianAddress"
+                                                placeholder="Enter Indonesian address">
+                                            <div class="row my-4">
+                                                <div class="col-md-6">
+                                                    <label for="stateProvinsi" class="form-label">Province or
+                                                        State</label>
+                                                    <input type="text" class="form-control" id="stateProvinsi"
+                                                        placeholder="Enter Province or State">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="kota" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="kota"
+                                                        placeholder="Enter City">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="kodePos" class="form-label">Postal Code</label>
+                                                    <input type="text" class="form-control" id="kodePos"
+                                                        placeholder="Enter Postal Code">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- national role -->
+                            <div id="national-address" class="form-section hidden">
+                                <div class="row address-container">
+                                    <!-- Indonesian Address Column -->
+                                    <div class="col-md-5 address-column">
+                                        <div class="mb-3">
+                                            <label for="indonesianAddress" class="form-label">Indonesian Address</label>
+                                            <input type="text" class="form-control" id="indonesianAddress"
+                                                placeholder="Enter Indonesian address">
+                                            <div class="row my-4">
+                                                <div class="col-md-6">
+                                                    <label for="stateProvinsi" class="form-label">Province or
+                                                        State</label>
+                                                    <input type="text" class="form-control" id="stateProvinsi"
+                                                        placeholder="Enter Province or State">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="kota" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="kota"
+                                                        placeholder="Enter City">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="kodePos" class="form-label">Postal Code</label>
+                                                    <input type="text" class="form-control" id="kodePos"
+                                                        placeholder="Enter Postal Code">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="d-flex justify-content-between align-content-center mb-4">
@@ -583,9 +623,10 @@
                                     stroke="#FF5351" />
                             </svg> Back</button>
                         <!-- Submit Button -->
-                        <button type="submit" class="btn btn-danger mt-5 float-end rounded-0 px-5 danger-button">Save
-                            Data & Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <button type="submit" id="submitBtn"
+                            class="btn btn-danger mt-5 float-end rounded-0 px-5 danger-button">Continue <svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
                                     fill="#FFF" />
@@ -615,11 +656,61 @@
             }
         });
 
-        document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault();
+        document.addEventListener('DOMContentLoaded', function () {
+            const nationality = localStorage.getItem('nationality');
+            const nationalAddress = document.getElementById('national-address');
+            const internationalAddress = document.getElementById('international-address');
 
-            // Redirect to the next page
-            window.location.href = '/dashboard/familybackground.html';
+            if (nationality === 'national') {
+                nationalAddress.classList.add('show');
+                internationalAddress.classList.add('hidden');
+            } else if (nationality === 'international') {
+                internationalAddress.classList.add('show');
+                nationalAddress.classList.add('hidden');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.nav-link'); // All the tabs
+            const form = document.getElementById('myForm');
+            const submitBtn = document.getElementById('submitBtn');
+            let currentTabIndex = 0;
+
+            // Function to show the next tab
+            function showNextTab() {
+                if (currentTabIndex < tabs.length - 1) {
+                    // Hide current tab
+                    tabs[currentTabIndex].classList.remove('active');
+                    document.querySelector(tabs[currentTabIndex].dataset.bsTarget).classList.remove('show', 'active');
+
+                    // Show next tab
+                    currentTabIndex++;
+                    tabs[currentTabIndex].classList.add('active');
+                    document.querySelector(tabs[currentTabIndex].dataset.bsTarget).classList.add('show', 'active');
+
+                    // If it's the last tab, change button text to "Submit"
+                    if (currentTabIndex === tabs.length - 1) {
+                        submitBtn.textContent = 'Save Data & Continue';
+                    }
+                } else {
+                    // On the last tab, form will submit
+                    form.submit();
+                }
+            }
+
+            // Handle form submission
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent actual submission
+
+                // If not on the last tab, move to the next tab
+                if (currentTabIndex < tabs.length - 1) {
+                    showNextTab();
+                } else {
+                    // On last tab, allow submission
+                    form.submit();
+                    window.location.href = '/dashboard/familybackground.html';
+                }
+            });
         });
     </script>
 </body>
