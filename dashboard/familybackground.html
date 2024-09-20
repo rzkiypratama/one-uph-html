@@ -319,7 +319,8 @@
 
                     </div>
                     <div class="d-flex justify-content-between align-content-center mb-4">
-                        <button type="button" id="backButton" class="btn btn-outline-danger mt-5 float-end rounded-0 px-5"><svg
+                        <button type="button" id="backButton"
+                            class="btn btn-outline-danger mt-5 float-end rounded-0 px-5"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-chevron-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -343,90 +344,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const aliveRadio = document.getElementById('aliveMother');
-            const deceasedRadio = document.getElementById('deceasedMother');
-            const deceasedInput = document.getElementById('deceasedInputHide');
-
-            // Function to toggle visibility based on status
-            function togglePhoneNumberVisibility() {
-                if (deceasedRadio.checked) {
-                    deceasedInput.classList.add('hidden');
-                } else {
-                    deceasedInput.classList.remove('hidden');
-                }
-            }
-
-            // Event listeners for radio buttons
-            aliveRadio.addEventListener('change', togglePhoneNumberVisibility);
-            deceasedRadio.addEventListener('change', togglePhoneNumberVisibility);
-
-            // Initialize the visibility based on the default selection
-            togglePhoneNumberVisibility();
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const aliveFatherRadio = document.getElementById('aliveFather');
-            const deceasedFatherRadio = document.getElementById('deceasedFather');
-            const deceasedFatherInput = document.getElementById('deceasedFatherInputHide');
-
-            // Function to toggle visibility based on status
-            function togglePhoneNumberVisibility() {
-                if (deceasedFatherRadio.checked) {
-                    deceasedFatherInput.classList.add('hidden');
-                } else {
-                    deceasedFatherInput.classList.remove('hidden');
-                }
-            }
-
-            // Event listeners for radio buttons
-            aliveFatherRadio.addEventListener('change', togglePhoneNumberVisibility);
-            deceasedFatherRadio.addEventListener('change', togglePhoneNumberVisibility);
-
-            // Initialize the visibility based on the default selection
-            togglePhoneNumberVisibility();
-        });
-
-        const tabs = ['tab1-tab', 'tab2-tab']; // Daftar ID tabs
-        let currentTabIndex = 0;
-
-        const backButton = document.getElementById('backButton');
-        const nextButton = document.querySelector('.danger-button');
-
-        // Event listener untuk tombol Back
-        backButton.addEventListener('click', function () {
-            if (currentTabIndex > 0) {
-                currentTabIndex--;
-                const previousTab = new bootstrap.Tab(document.getElementById(tabs[currentTabIndex]));
-                previousTab.show();
-                updateButtons();
-            } else {
-                // Jika di tab pertama, kembali ke halaman sebelumnya
-                window.location.href = '/dashboard/intakeyear.html';
-            }
-        });
-
-        // Event listener untuk tombol Next (Continue/Submit)
-        document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            if (currentTabIndex < tabs.length - 1) {
-                currentTabIndex++;
-                const nextTab = new bootstrap.Tab(document.getElementById(tabs[currentTabIndex]));
-                nextTab.show();
-                updateButtons();
-            } else {
-                // jika perlu alert bisa digunakan
-                alert('Form submitted!');
-                // Logika submit form
-                window.location.href = '/dashboard/educationbackground.html';
-            }
-        });
-
-        // Initial button state
-        updateButtons();
-    </script>
+    <script src="/js/familybackground.js"></script>
 </body>
 
 </html>
