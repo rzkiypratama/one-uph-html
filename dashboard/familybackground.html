@@ -189,7 +189,7 @@
                                                         <!-- Add more country codes as needed -->
                                                     </select>
                                                     <!-- Input for whatsapp number -->
-                                                    <input type="tel" class="form-control" id="parentMobileNumber"
+                                                    <input type="tel" class="form-control" id="motherMobileNumber"
                                                         placeholder="Phone Number">
                                                 </div>
                                             </div>
@@ -221,13 +221,36 @@
                                         <div class="col-md-12 mb-4">
                                             <label class="form-label">Status</label>
                                             <div class="radio-btn-group d-flex gap-1">
-                                                <input type="radio" id="alive" name="fatherStatus" value="alive"
+                                                <input type="radio" id="aliveFather" name="fatherStatus" value="alive"
                                                     checked>
-                                                <label for="alive">Alive</label>
+                                                <label for="aliveFather">Alive</label>
 
-                                                <input type="radio" id="deceased" name="fatherStatus" value="deceased">
-                                                <label for="deceased">Deceased</label>
+                                                <input type="radio" id="deceasedFather" name="fatherStatus" value="deceased">
+                                                <label for="deceasedFather">Deceased</label>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="deceasedFatherInputHide">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Mobile Phone Number</label>
+                                            <div class="input-group phone-input-group">
+                                                <!-- Select for country code -->
+                                                <select class="form-select" id="countryCode">
+                                                    <option value="+62">+62</option>
+                                                    <option value="+1">+1</option>
+                                                    <option value="+44">+44</option>
+                                                    <option value="+91">+91</option>
+                                                    <!-- Add more country codes as needed -->
+                                                </select>
+                                                <!-- Input for whatsapp number -->
+                                                <input type="tel" class="form-control" id="fatherMobileNumber"
+                                                    placeholder="Phone Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="parentEmail" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="parentEmail"
+                                                placeholder="Enter your email address">
                                         </div>
                                     </div>
                                 </div>
@@ -303,9 +326,8 @@
                                     stroke="#FF5351" />
                             </svg> Back</button>
                         <!-- Submit Button -->
-                        <button type="submit"
-                            class="btn btn-danger mt-5 float-end rounded-0 px-5 danger-button">Save
-                            Data & Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        <button type="submit" id="submitBtn"
+                            class="btn btn-danger mt-5 float-end rounded-0 px-5 danger-button">Continue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
@@ -319,14 +341,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('myForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Redirect to the next page
-            window.location.href = '/dashboard/educationbackground.html';
-        });
-    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const aliveRadio = document.getElementById('aliveMother');
@@ -348,6 +362,71 @@
 
             // Initialize the visibility based on the default selection
             togglePhoneNumberVisibility();
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const aliveFatherRadio = document.getElementById('aliveFather');
+            const deceasedFatherRadio = document.getElementById('deceasedFather');
+            const deceasedFatherInput = document.getElementById('deceasedFatherInputHide');
+
+            // Function to toggle visibility based on status
+            function togglePhoneNumberVisibility() {
+                if (deceasedFatherRadio.checked) {
+                    deceasedFatherInput.classList.add('hidden');
+                } else {
+                    deceasedFatherInput.classList.remove('hidden');
+                }
+            }
+
+            // Event listeners for radio buttons
+            aliveFatherRadio.addEventListener('change', togglePhoneNumberVisibility);
+            deceasedFatherRadio.addEventListener('change', togglePhoneNumberVisibility);
+
+            // Initialize the visibility based on the default selection
+            togglePhoneNumberVisibility();
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.nav-link'); // All the tabs
+            const form = document.getElementById('myForm');
+            const submitBtn = document.getElementById('submitBtn');
+            let currentTabIndex = 0;
+
+            // Function to show the next tab
+            function showNextTab() {
+                if (currentTabIndex < tabs.length - 1) {
+                    // Hide current tab
+                    tabs[currentTabIndex].classList.remove('active');
+                    document.querySelector(tabs[currentTabIndex].dataset.bsTarget).classList.remove('show', 'active');
+
+                    // Show next tab
+                    currentTabIndex++;
+                    tabs[currentTabIndex].classList.add('active');
+                    document.querySelector(tabs[currentTabIndex].dataset.bsTarget).classList.add('show', 'active');
+
+                    // If it's the last tab, change button text to "Submit"
+                    if (currentTabIndex === tabs.length - 1) {
+                        submitBtn.textContent = 'Save Data & Continue';
+                    }
+                } else {
+                    // On the last tab, form will submit
+                    form.submit();
+                }
+            }
+
+            // Handle form submission
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent actual submission
+
+                // If not on the last tab, move to the next tab
+                if (currentTabIndex < tabs.length - 1) {
+                    showNextTab();
+                } else {
+                    // On last tab, allow submission
+                    form.submit();
+                    window.location.href = '/dashboard/educationbackground.html';
+                }
+            });
         });
 
     </script>
