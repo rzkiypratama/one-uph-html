@@ -614,8 +614,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-between align-content-center mb-4">
-                        <button type="button" class="btn btn-outline-danger mt-5 float-end rounded-0 px-5"
-                            onclick="window.location.href = '/dashboard/intakeyear.html'"><svg
+                        <button type="button" id="backButton" class="btn btn-outline-danger mt-5 float-end rounded-0 px-5"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-chevron-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -670,48 +669,56 @@
             }
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.nav-link'); // All the tabs
-            const form = document.getElementById('myForm');
-            const submitBtn = document.getElementById('submitBtn');
-            let currentTabIndex = 0;
+        const tabs = ['tab1-tab', 'tab2-tab', 'tab3-tab', 'tab4-tab']; // Daftar ID tabs
+        let currentTabIndex = 0;
 
-            // Function to show the next tab
-            function showNextTab() {
-                if (currentTabIndex < tabs.length - 1) {
-                    // Hide current tab
-                    tabs[currentTabIndex].classList.remove('active');
-                    document.querySelector(tabs[currentTabIndex].dataset.bsTarget).classList.remove('show', 'active');
+        const backButton = document.getElementById('backButton');
+        const nextButton = document.querySelector('.danger-button');
 
-                    // Show next tab
-                    currentTabIndex++;
-                    tabs[currentTabIndex].classList.add('active');
-                    document.querySelector(tabs[currentTabIndex].dataset.bsTarget).classList.add('show', 'active');
+        // Fungsi untuk memperbarui status tombol Back dan Next
+        function updateButtons() {
+            backButton.style.display = currentTabIndex === 0 ? 'block' : 'block';
+            backButton.innerHTML = currentTabIndex === 0
+                ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">' +
+                '<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />' +
+                '</svg> Back'
+                : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">' +
+                '<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />' +
+                '</svg> Back';
+        }
 
-                    // If it's the last tab, change button text to "Submit"
-                    if (currentTabIndex === tabs.length - 1) {
-                        submitBtn.textContent = 'Save Data & Continue';
-                    }
-                } else {
-                    // On the last tab, form will submit
-                    form.submit();
-                }
+        // Event listener untuk tombol Back
+        backButton.addEventListener('click', function () {
+            if (currentTabIndex > 0) {
+                currentTabIndex--;
+                const previousTab = new bootstrap.Tab(document.getElementById(tabs[currentTabIndex]));
+                previousTab.show();
+                updateButtons();
+            } else {
+                // Jika di tab pertama, kembali ke halaman sebelumnya
+                window.location.href = '/dashboard/intakeyear.html';
             }
-
-            // Handle form submission
-            form.addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent actual submission
-
-                // If not on the last tab, move to the next tab
-                if (currentTabIndex < tabs.length - 1) {
-                    showNextTab();
-                } else {
-                    // On last tab, allow submission
-                    form.submit();
-                    window.location.href = '/dashboard/familybackground.html';
-                }
-            });
         });
+
+        // Event listener untuk tombol Next (Continue/Submit)
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (currentTabIndex < tabs.length - 1) {
+                currentTabIndex++;
+                const nextTab = new bootstrap.Tab(document.getElementById(tabs[currentTabIndex]));
+                nextTab.show();
+                updateButtons();
+            } else {
+                // jika perlu alert bisa digunakan
+                // alert('Form submitted!');
+                // Logika submit form
+                window.location.href = '/dashboard/personalinformation.html';
+            }
+        });
+
+        // Initial button state
+        updateButtons();
     </script>
 </body>
 
