@@ -54,10 +54,6 @@ p {
     background-color: #EFF4FF;
 }
 
-.card-body {
-    /* height: 418px; */
-}
-
 .btn-link {
   text-decoration: none;
 }
@@ -191,6 +187,10 @@ hr.done-step {
   display: none;
 }
 
+.arrow-back {
+  width: 16px;
+  height: 13px;
+}
 /* CARD CONTENT */
 
 .left-content {
