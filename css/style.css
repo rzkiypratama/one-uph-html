@@ -25,6 +25,7 @@ input, select {
 
 label::after {
   content: "*";
+  color: #ff5351;
 }
 
 p {
