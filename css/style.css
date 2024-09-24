@@ -23,6 +23,10 @@ input, select {
   padding-left: 10px !important;
 }
 
+label::after {
+  content: "*";
+}
+
 p {
   margin-bottom: 0;
 }
