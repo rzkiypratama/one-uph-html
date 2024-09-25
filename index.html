@@ -12,9 +12,13 @@
 
 <body class="container">
   <!-- header -->
-  <img src="/assets/uph-logo.png" alt="logo" class="uphlogo pt-5 position-absolute">
+  <img src="/assets/uph-logo.png" alt="logo" class="uphlogo pt-5 position-absolute d-none d-md-block">
 
-  <div class="container d-flex p-5 justify-content-center align-items-center min-vh-100 homepage-container">
+  <div class="container d-flex flex-column flex-md-row p-md-5 justify-content-around justify-content-md-center align-items-center min-vh-100 homepage-container">
+
+    <div class="d-md-none">
+      <img src="/assets/uph-logo.png" alt="logo" class="uphlogo-mobile">
+    </div>
 
     <div class="d-flex flex-column align-items-center welcome-login">
       <img src="/assets/graduate.png" alt="graduate" class="graduate-logo">
@@ -22,8 +26,8 @@
       <p class="fst-italic">ready to apply for your future in UPH?</p>
     </div>
 
-    <div class="d-flex flex-column gap-3">
-
+    <!-- desktop button start -->
+    <div class="d-flex flex-column gap-3 d-none d-md-flex">
       <div class="card p-1 shadow-sm card-login" onclick="window.location.href = '/login.html'">
         <div class="card-body">
           <h5 class="card-title">Sign In</h5>
@@ -40,6 +44,23 @@
         </div>
       </div>
     </div>
+    <!-- desktop button end -->
+
+    <!-- mobile button start -->
+    <div class="d-flex flex-column gap-3 d-md-none d-flex text-center w-100">
+      <div class="card shadow-sm card-login" onclick="window.location.href = '/login.html'">
+        <div class="card-body">
+          <h5 class="card-title">Sign In</h5>
+        </div>
+      </div>
+
+      <div class="card shadow-sm card-register" onclick="window.location.href = '/nationality.html'">
+        <div class="card-body">
+          <h5 class="card-title">Register</h5>
+        </div>
+      </div>
+    </div>
+    <!-- mobile button end -->
 
   </div>
 

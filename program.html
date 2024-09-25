@@ -12,11 +12,12 @@
 
 <body class="container">
     <!-- header -->
-    <img src="/assets/uph-logo.png" alt="logo" class="uphlogo pt-5 position-absolute">
+    <img src="/assets/uph-logo.png" alt="logo" class="uphlogo pt-5 position-absolute d-none d-md-block">
 
-    <div class="d-flex p-5 justify-content-center align-items-center min-vh-100 homepage-container">
+    <div class="d-flex py-4 px-2 p-md-5 justify-content-md-center align-items-md-center vh-100 homepage-container">
 
-        <span class="card card-container p-5">
+        <!-- desktop view start -->
+        <div class="card card-container p-5 d-none d-md-block">
             <div class="d-flex justify-content-between box-item">
                 <div class="left-content">
                     <p class="text-uppercase">step 6 of 8</p>
@@ -123,11 +124,137 @@
                 </div>
             </div>
 
-            <span class="d-flex gap-2 align-items-md-center cursor-pointer btn-sign" role="button" id="backToNationality" onclick="window.location.href = '/programmajor.html'">
+            <span class="d-flex gap-2 align-items-md-center cursor-pointer btn-sign" role="button"
+                id="backToNationality" onclick="window.location.href = '/programmajor.html'">
                 <img src="/assets/left-arrow.png" alt="arrow-left">
                 <p class="back-button p-0">back to Faculty Selection</p>
             </span>
         </div>
+        <!-- desktop view ends -->
+
+        <!-- mobile view start -->
+        <div class="d-flex flex-column d-md-none">
+            <div class="upper-content d-flex gap-3 align-items-center">
+                <span class="float-end">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
+                        class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                    </svg>
+                </span>
+
+                <span class="text-white" onclick="window.location.href = '/campus.html'">
+                    <p class="mobile-title">Step 6 of 8</p>
+                    <p class="mobile-subtitle">Program</p>
+                </span>
+            </div>
+
+            <div class="card rounded-4 p-3 middle-content">
+                <div class="left-content">
+                    <h3>In which specific Program do you intend to apply?</h3>
+                    <p class="children">Choose a program</p>
+                    <p class="badge">Arts & Social Sciences</p>
+                    <p class="badge">Design</p>
+                    <hr class="solid">
+                </div>
+
+                <div class="bagian-bawah d-flex flex-column justify-content-between h-100">
+                    <div class="campus-grid card-box overflow-x-scroll">
+                        <div class="card-nationality border-0"
+                            style="background-image: url('/assets/design.jpeg'); height: 80px; width: auto;"
+                            data-bs-toggle="modal" data-bs-target="#modal">
+                            <!-- Gradient Overlay -->
+                            <div class="gradient-overlay"
+                                style="background-image: linear-gradient(60deg, #BCD1FF, #f1f1f122);" \>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="title-container">
+                                <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                                <h3 class="title w-100" style="color: #333333;">Graphic Design</h3>
+                            </div>
+                        </div>
+
+                        <div class="card-nationality border-0"
+                            style="background-image: url('/assets/productdesign.png'); height: 80px; width: auto;"
+                            data-bs-toggle="modal" data-bs-target="#modal">
+                            <!-- Gradient Overlay -->
+                            <div class="gradient-overlay"
+                                style="background-image: linear-gradient(60deg, #BCD1FF, #f1f1f122);" \>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="title-container">
+                                <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                                <h3 class="title w-100" style="color: #333333;">Product Design</h3>
+                            </div>
+                        </div>
+
+                        <div class="card-nationality border-0"
+                            style="background-image: url('/assets/digitalart.jpeg'); height: 80px; width: auto;"
+                            data-bs-toggle="modal" data-bs-target="#modal">
+                            <!-- Gradient Overlay -->
+                            <div class="gradient-overlay"
+                                style="background-image: linear-gradient(60deg, #BCD1FF, #f1f1f122);" \>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="title-container">
+                                <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                                <h3 class="title w-100" style="color: #333333;">Digital Arts</h3>
+                            </div>
+                        </div>
+
+                        <div class="card-nationality border-0"
+                            style="background-image: url('/assets/interiordesign.jpeg'); height: 80px; width: auto;"
+                            data-bs-toggle="modal" data-bs-target="#modal">
+                            <!-- Gradient Overlay -->
+                            <div class="gradient-overlay"
+                                style="background-image: linear-gradient(60deg, #BCD1FF, #f1f1f122);" \>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="title-container">
+                                <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                                <h3 class="title w-100" style="color: #333333;">Interior Design</h3>
+                            </div>
+                        </div>
+
+                        <div class="card-nationality border-0"
+                            style="background-image: url('/assets/movie.png'); height: 80px; width: auto;"
+                            data-bs-toggle="modal" data-bs-target="#modal">
+                            <!-- Gradient Overlay -->
+                            <div class="gradient-overlay"
+                                style="background-image: linear-gradient(60deg, #BCD1FF, #f1f1f122);" \>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="title-container">
+                                <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                                <h3 class="title w-100" style="color: #333333;">Film</h3>
+                            </div>
+                        </div>
+
+                        <div class="card-nationality border-0"
+                            style="background-image: url('/assets/arcitecture.png'); height: 80px; width: auto;"
+                            data-bs-toggle="modal" data-bs-target="#modal">
+                            <!-- Gradient Overlay -->
+                            <div class="gradient-overlay"
+                                style="background-image: linear-gradient(60deg, #BCD1FF, #f1f1f122);" \>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="title-container">
+                                <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                                <h3 class="title w-100" style="color: #333333;">Architecture</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile view ends -->
     </div>
 
     <!-- MODAL -->
@@ -135,14 +262,16 @@
         data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
+                 <!-- Custom close button (top left) -->
+                 <img src="/assets/close.webp" class="custom-close" data-bs-dismiss="modal"
+                 aria-label="Close"></img>
                 <div class="modal-body" style="height: max-content;">
                     <div>
                         <div class="w-100">
-                            <div class="d-flex gap-4">
+                            <div class="d-flex flex-column flex-md-row gap-4">
                                 <div>
-                                    <div class="card-programmodal border-0"
-                                        style="background-image: url('/assets/arcitecture.png'); height: 445px; width: 225px;"
-                                        data-bs-toggle="modal" data-bs-target="#modal">
+                                    <div class="card-programmodal border-0" data-bs-toggle="modal"
+                                        data-bs-target="#modal">
                                         <!-- Gradient Overlay -->
                                         <div class="gradient-overlay"
                                             style="background-image: linear-gradient(30deg, #BCD1FF, #f1f1f122);" \>
@@ -150,7 +279,7 @@
                                     </div>
                                 </div>
 
-                                <div class="kanan w-75">
+                                <div class="kanan w-md-75">
                                     <!-- header -->
                                     <span class="d-flex justify-content-between align-items-center pt-2 mb-3">
                                         <h3 class="program-title m-0">Architecture</h3>
@@ -187,7 +316,7 @@
                                     <hr class="solid-modal">
 
                                     <div class="kanan d-flex justify-content-between">
-                                        <button type="button" class="btn link back-program-btn"
+                                        <button type="button" class="btn link back-program-btn d-none d-md-block"
                                             data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" fill="currentColor" class="bi bi-chevron-left"
                                                 viewBox="0 0 16 16">
@@ -196,7 +325,16 @@
                                                     stroke="#FF5351" />
                                             </svg> back</button>
                                         <button type="button"
-                                            class="btn text-white select-program-btn rounded-0 px-5"><a
+                                            class="btn text-white select-program-btn rounded-0 px-5 d-none d-md-block"><a
+                                                href="/personalinformation.html" class="a-program">select this program
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                                                        stroke="#FFF" />
+                                                </svg></a></button>
+                                        <button type="button"
+                                            class="btn text-white select-program-btn rounded-0 px-5 w-100 d-md-none"><a
                                                 href="/personalinformation.html" class="a-program">select this program
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
