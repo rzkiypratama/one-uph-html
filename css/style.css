@@ -83,7 +83,7 @@ p, h1, h2, h3, h4, h5 {
   font-weight: 600;
 }
 
-#backToSignIn {
+#backToSignIn, #backToAdmission {
   cursor: pointer !important;
 }
 
@@ -286,6 +286,11 @@ p, h1, h2, h3, h4, h5 {
 
 .select-program-btn {
   background-color: #ff5351;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 .select-program-btn a {
@@ -310,6 +315,108 @@ p, h1, h2, h3, h4, h5 {
   background-color: #ff535199;
   color: white;
 }
+
+/* personal information */
+
+  
+  .form-label {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5c5c5c;
+    font-size: 12px;
+    letter-spacing: 0.75px;
+  }
+  
+  .form-label-pwd {
+    margin-bottom: 0;
+  }
+  
+  .form-control,
+  .form-select {
+    border: none;
+    border-bottom: 2px solid #d3d3d3;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    box-shadow: none;
+    border-bottom-color: #007bff;
+  }
+  
+  .form-input-subtitle {
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #989898;
+    margin: 0;
+  }
+  
+  .submit-btn-div {
+    width: auto;
+  }
+
+  /* review mobile */
+  p.form-label-review {
+    margin: 0;
+  }
+  
+  .form-control-review {
+    border: none;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+  }
+  
+  .form-label-review {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #264a99;
+    font-size: 12px;
+  }
+  
+  .back-review-btn {
+    color: #7aa3ff;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .back-review-btn:hover {
+    color: #7aa3ff99;
+  }
+  
+  .review-modal-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #264a99;
+    font-size: 20px;
+  }
+  
+  .review-modal-subtitle {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #999999;
+    font-size: 14px;
+  }
+  
+  .modal-body-review {
+    padding: 2rem;
+  }
+  
+  .check-icon {
+    height: 44px !important;
+    width: 44px !important;
+  }
 
 @media (min-width: 768px) {
 
@@ -717,44 +824,7 @@ p, h1, h2, h3, h4, h5 {
   }
   
   /* PERSONALINFORMATION.HTML */
-  
-  .form-label {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #5c5c5c;
-    font-size: 12px;
-    letter-spacing: 0.75px;
-  }
-  
-  .form-label-pwd {
-    margin-bottom: 0;
-  }
-  
-  .form-control,
-  .form-select {
-    border: none;
-    border-bottom: 2px solid #d3d3d3;
-    border-radius: 0;
-    padding-left: 0;
-    padding-right: 0;
-    font-family: "Work Sans", sans-serif;
-    font-size: 14px;
-  }
-  
-  .form-control:focus,
-  .form-select:focus {
-    box-shadow: none;
-    border-bottom-color: #007bff;
-  }
-  
-  .form-input-subtitle {
-    font-family: "Work Sans", sans-serif;
-    font-size: 12px;
-    font-style: italic;
-    color: #989898;
-    margin: 0;
-  }
+  /* based with mobile styling */
   
   /* REVIEW.html */
   
