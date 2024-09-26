@@ -1,292 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <title>Step Navigation</title>
     <style>
-        .d-none {
-            display: none !important;
-        }
+      .d-none {
+        display: none !important;
+      }
 
-        .card-nationality {
-            cursor: pointer;
-            /* Menambahkan cursor pointer untuk menunjukkan bahwa kartu dapat diklik */
-        }
+      .card-nationality {
+        cursor: pointer;
+        /* Menambahkan cursor pointer untuk menunjukkan bahwa kartu dapat diklik */
+      }
     </style>
-</head>
+  </head>
 
-<body class="container">
+  <body class="container">
     <div class="d-flex py-4 px-2 p-md-5 justify-content-md-center align-items-md-center vh-100 homepage-container">
+      <!-- nationality view -->
+      <div id="nationalityPage" class="card card-container p-5 d-none d-md-block">
+        <div class="d-flex justify-content-between box-item">
+          <div class="left-content">
+            <p class="text-uppercase">step 1 of 8</p>
+            <h3>Are you Indonesian or International Student?</h3>
+            <p class="children">Choose your nationality</p>
+            <hr class="solid" />
+          </div>
 
-        <!-- nationality view -->
-        <div id="nationalityPage" class="card card-container p-5 d-none d-md-block">
-            <div class="d-flex justify-content-between box-item">
-                <div class="left-content">
-                    <p class="text-uppercase">step 1 of 8</p>
-                    <h3>Are you Indonesian or International Student?</h3>
-                    <p class="children">Choose your nationality</p>
-                    <hr class="solid">
-                </div>
+          <div class="d-flex gap-3 card-box">
+            <!-- <a href="/studylevel.html" class="nationality" data-nationality="National"> -->
+            <div class="card-nationality border-0 fade-in-right" data-next="step3Page" data-nationality="National" style="background-image: url('/assets/student.jpeg'); height: 402px; width: 272px">
+              <!-- Gradient Overlay -->
+              <div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>
 
-                <div class="d-flex gap-3 card-box">
-                    <!-- <a href="/studylevel.html" class="nationality" data-nationality="National"> -->
-                    <div class="card-nationality border-0 fade-in-right" data-next="step3Page" data-nationality="National"
-                        style="background-image: url('/assets/student.jpeg'); height: 402px; width: 272px;">
-                        <!-- Gradient Overlay -->
-                        <div class="gradient-overlay"
-                            style="background-image: linear-gradient(to top, #BCD1FF, #f1f1f122);" \>
-                        </div>
-
-                        <!-- Title -->
-                        <div class="title-container">
-                            <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-                            <h3 class="title" style="color: #333333;">I’m an Indonesian Student</h3>
-                        </div>
-                    </div>
-                    <!-- </a> -->
-
-                    <!-- <a href="/international" class="nationality" data-nationality="International"> -->
-                    <div class="card-nationality border-0 fade-in-right" data-nationality="International"
-                        style="background-image: url('/assets/international-student.png'); height: 402px; width: 272px;">
-                        <!-- Gradient Overlay -->
-                        <div class="gradient-overlay"
-                            style="background-image: linear-gradient(to top, #BCD1FF, #f1f1f122);" \>
-                        </div>
-
-                        <!-- Title -->
-                        <div class="title-container">
-                            <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-                            <h3 class="title" style="color: #333333;">I’m an International Student</h3>
-                        </div>
-                    </div>
-                    <!-- </a> -->
-                </div>
-
+              <!-- Title -->
+              <div class="title-container">
+                <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                <h3 class="title" style="color: #333333">I’m an Indonesian Student</h3>
+              </div>
             </div>
+            <!-- </a> -->
 
-            <span class="d-flex gap-2 align-items-md-center cursor-pointer btn-sign" role="button" id="backToSignIn">
-                <img src="/assets/left-arrow.png" alt="arrow-left">
-                <p class="back-button p-0">back to Sign In</p>
-            </span>
+            <!-- <a href="/international" class="nationality" data-nationality="International"> -->
+            <div class="card-nationality border-0 fade-in-right" data-nationality="International" style="background-image: url('/assets/international-student.png'); height: 402px; width: 272px">
+              <!-- Gradient Overlay -->
+              <div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>
+
+              <!-- Title -->
+              <div class="title-container">
+                <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                <h3 class="title" style="color: #333333">I’m an International Student</h3>
+              </div>
+            </div>
+            <!-- </a> -->
+          </div>
         </div>
 
-        <div id="nationalityPageMobile" class="d-flex flex-column d-md-none">
-            <div class="upper-content d-flex gap-3 align-items-center">
-                <span class="float-end">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff"
-                        class="bi bi-chevron-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                    </svg>
-                </span>
+        <span class="d-flex gap-2 align-items-md-center cursor-pointer btn-sign" role="button" id="backToSignIn">
+          <img src="/assets/left-arrow.png" alt="arrow-left" />
+          <p class="back-button p-0">back to Sign In</p>
+        </span>
+      </div>
 
-                <span class="text-white" onclick="window.location.href = '/'">
-                    <p class="mobile-title">Step 1 of 8</p>
-                    <p class="mobile-subtitle">Nationality</p>
-                </span>
-            </div>
+      <div id="nationalityPageMobile" class="d-flex flex-column d-md-none">
+        <div class="upper-content d-flex gap-3 align-items-center">
+          <span class="float-end">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+            </svg>
+          </span>
 
-            <div class="card rounded-4 p-3 middle-content">
-                <div class="left-content">
-                    <h3>Are you Indonesian or International Student?</h3>
-                    <p class="children">Choose your nationality</p>
-                    <hr class="solid">
-                </div>
-
-                <div class="bagian-bawah d-flex flex-column justify-content-between h-100">
-                    <div class="d-flex flex-column gap-3 card-box">
-                        <a href="/studylevel.html" class="nationality" data-nationality="National">
-                            <div class="card-nationality border-0 fade-in-right"
-                                style="background-image: url('/assets/student.jpeg'); height: 180px; width: auto; background-position: top;">
-                                <!-- Gradient Overlay -->
-                                <div class="gradient-overlay"
-                                    style="background-image: linear-gradient(to top, #BCD1FF, #f1f1f122);" \>
-                                </div>
-
-                                <!-- Title -->
-                                <div class="title-container">
-                                    <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-                                    <h3 class="title" style="color: #333333;">I’m an Indonesian Student</h3>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="/international" class="nationality" data-nationality="International">
-                            <div class="card-nationality border-0 fade-in-right"
-                                style="background-image: url('/assets/international-student.png'); height: 180px; width: auto; background-position: top;">
-                                <!-- Gradient Overlay -->
-                                <div class="gradient-overlay"
-                                    style="background-image: linear-gradient(to top, #BCD1FF, #f1f1f122);" \>
-                                </div>
-
-                                <!-- Title -->
-                                <div class="title-container">
-                                    <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-                                    <h3 class="title" style="color: #333333;">I’m an International Student</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+          <span class="text-white" onclick="window.location.href = '/'">
+            <p class="mobile-title">Step 1 of 8</p>
+            <p class="mobile-subtitle">Nationality</p>
+          </span>
         </div>
 
-        <!-- study level view -->
-        <div id="studyLevelPage" class="card card-container p-5 d-none">
-            <h3>Which study level are you interested in?</h3>
-            <div class="card-group">
-                <div class="card" data-next="step3Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Undergraduate (S1)</h5>
-                    </div>
-                </div>
-                <div class="card" data-next="step3Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Graduate (S2 & S3)</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="card rounded-4 p-3 middle-content">
+          <div class="left-content">
+            <h3>Are you Indonesian or International Student?</h3>
+            <p class="children">Choose your nationality</p>
+            <hr class="solid" />
+          </div>
 
-        <!-- Step 3 -->
-        <div id="step3Page" class="card card-container p-5 d-none">
-            <h3>Step 3: Additional Information</h3>
-            <div class="card-group">
-                <div class="card" data-next="step4Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Please provide your additional information</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <div class="bagian-bawah d-flex flex-column justify-content-between h-100">
+            <div class="d-flex flex-column gap-3 card-box">
+              <a href="/studylevel.html" class="nationality" data-nationality="National">
+                <div class="card-nationality border-0 fade-in-right" style="background-image: url('/assets/student.jpeg'); height: 180px; width: auto; background-position: top">
+                  <!-- Gradient Overlay -->
+                  <div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>
 
-        <!-- Step 4 -->
-        <div id="step4Page" class="card card-container p-5 d-none">
-            <h3>Step 4: Upload Documents</h3>
-            <div class="card-group">
-                <div class="card" data-next="step5Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Upload necessary documents</h5>
-                    </div>
+                  <!-- Title -->
+                  <div class="title-container">
+                    <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                    <h3 class="title" style="color: #333333">I’m an Indonesian Student</h3>
+                  </div>
                 </div>
-            </div>
-        </div>
+              </a>
 
-        <!-- Step 5 -->
-        <div id="step5Page" class="card card-container p-5 d-none">
-            <h3>Step 5: Personal Statement</h3>
-            <div class="card-group">
-                <div class="card" data-next="step6Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Write your personal statement</h5>
-                    </div>
+              <a href="/international" class="nationality" data-nationality="International">
+                <div class="card-nationality border-0 fade-in-right" style="background-image: url('/assets/international-student.png'); height: 180px; width: auto; background-position: top">
+                  <!-- Gradient Overlay -->
+                  <div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>
+
+                  <!-- Title -->
+                  <div class="title-container">
+                    <!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
+                    <h3 class="title" style="color: #333333">I’m an International Student</h3>
+                  </div>
                 </div>
+              </a>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Step 6 -->
-        <div id="step6Page" class="card card-container p-5 d-none">
-            <h3>Step 6: Choose Courses</h3>
-            <div class="card-group">
-                <div class="card" data-next="step7Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Select your preferred courses</h5>
-                    </div>
-                </div>
+      <!-- study level view -->
+      <div id="studyLevelPage" class="card card-container p-5 d-none">
+        <h3>Which study level are you interested in?</h3>
+        <div class="card-group">
+          <div class="card" data-next="step3Page">
+            <div class="card-body">
+              <h5 class="card-title">Undergraduate (S1)</h5>
             </div>
-        </div>
-
-        <!-- Step 7 -->
-        <div id="step7Page" class="card card-container p-5 d-none">
-            <h3>Step 7: Review Application</h3>
-            <div class="card-group">
-                <div class="card" data-next="step8Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Review your application details</h5>
-                    </div>
-                </div>
+          </div>
+          <div class="card" data-next="step3Page">
+            <div class="card-body">
+              <h5 class="card-title">Graduate (S2 & S3)</h5>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Step 8 -->
-        <div id="step8Page" class="card card-container p-5 d-none">
-            <h3>Step 8: Submit Application</h3>
-            <div class="card-group">
-                <div class="card" data-next="step7Page">
-                    <div class="card-body">
-                        <h5 class="card-title">Submit your application</h5>
-                    </div>
-                </div>
+      <!-- Step 3 -->
+      <div id="step3Page" class="card card-container p-5 d-none">
+        <h3>Step 3: Additional Information</h3>
+        <div class="card-group">
+          <div class="card" data-next="step4Page">
+            <div class="card-body">
+              <h5 class="card-title">Please provide your additional information</h5>
             </div>
+          </div>
         </div>
+      </div>
 
+      <!-- Step 4 -->
+      <div id="step4Page" class="card card-container p-5 d-none">
+        <h3>Step 4: Upload Documents</h3>
+        <div class="card-group">
+          <div class="card" data-next="step5Page">
+            <div class="card-body">
+              <h5 class="card-title">Upload necessary documents</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div id="step5Page" class="card card-container p-5 d-none">
+        <h3>Step 5: Personal Statement</h3>
+        <div class="card-group">
+          <div class="card" data-next="step6Page">
+            <div class="card-body">
+              <h5 class="card-title">Write your personal statement</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div id="step6Page" class="card card-container p-5 d-none">
+        <h3>Step 6: Choose Courses</h3>
+        <div class="card-group">
+          <div class="card" data-next="step7Page">
+            <div class="card-body">
+              <h5 class="card-title">Select your preferred courses</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7 -->
+      <div id="step7Page" class="card card-container p-5 d-none">
+        <h3>Step 7: Review Application</h3>
+        <div class="card-group">
+          <div class="card" data-next="step8Page">
+            <div class="card-body">
+              <h5 class="card-title">Review your application details</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 8 -->
+      <div id="step8Page" class="card card-container p-5 d-none">
+        <h3>Step 8: Submit Application</h3>
+        <div class="card-group">
+          <div class="card" data-next="step7Page">
+            <div class="card-body">
+              <h5 class="card-title">Submit your application</h5>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz4fnFO9gybBogGzFj5ip3fwb1pAXC/ZGHI+ygKNhsNHDJ1URyZcbj3V8+"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-DBjhmce2dxNfdv35jkLZOeAWOmU8iyHfQZfFi8RmgHX7MwPZniB1quK41SIJKVbl"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzFj5ip3fwb1pAXC/ZGHI+ygKNhsNHDJ1URyZcbj3V8+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-DBjhmce2dxNfdv35jkLZOeAWOmU8iyHfQZfFi8RmgHX7MwPZniB1quK41SIJKVbl" crossorigin="anonymous"></script>
 
     <script>
-        const pages = [
-            document.getElementById("nationalityPage"),
-            document.getElementById("studyLevelPage"),
-            document.getElementById("step3Page"),
-            document.getElementById("step4Page"),
-            document.getElementById("step5Page"),
-            document.getElementById("step6Page"),
-            document.getElementById("step7Page"),
-            document.getElementById("step8Page")
-        ];
+      const pages = [
+        document.getElementById("nationalityPage"),
+        document.getElementById("studyLevelPage"),
+        document.getElementById("step3Page"),
+        document.getElementById("step4Page"),
+        document.getElementById("step5Page"),
+        document.getElementById("step6Page"),
+        document.getElementById("step7Page"),
+        document.getElementById("step8Page"),
+      ];
 
-        let currentStep = 0;
+      let currentStep = 0;
 
-        function showPage(step) {
-            pages.forEach((page, index) => {
-                page.classList.toggle('d-none', index !== step);
-            });
-            // Update the URL
-            const stepName = pages[step].id;
-            history.pushState(null, null, `#${stepName}`);
-        }
-
-        document.querySelectorAll('.card-nationality').forEach(card => {
-            card.addEventListener('click', () => {
-                const nationality = card.getAttribute('data-nationality'); // Ambil nilai dari data-nationality
-                localStorage.setItem('nationality', nationality); // Simpan ke localStorage
-
-                const nextStep = card.getAttribute('data-next');
-                const nextStepIndex = pages.findIndex(page => page.id === nextStep);
-                if (nextStepIndex !== -1) {
-                    currentStep = nextStepIndex;
-                    showPage(currentStep);
-                }
-            });
+      function showPage(step) {
+        pages.forEach((page, index) => {
+          page.classList.toggle("d-none", index !== step);
         });
+        // Update the URL
+        const stepName = pages[step].id;
+        history.pushState(null, null, `#${stepName}`);
+      }
 
+      document.querySelectorAll(".card-nationality").forEach((card) => {
+        card.addEventListener("click", () => {
+          const nationality = card.getAttribute("data-nationality"); // Ambil nilai dari data-nationality
+          localStorage.setItem("nationality", nationality); // Simpan ke localStorage
 
-        // Initialize the first page based on the URL
-        function initializeStepFromURL() {
-            const hash = window.location.hash.substring(1); // Remove the "#" character
-            const stepIndex = pages.findIndex(page => page.id === hash);
-            if (stepIndex !== -1) {
-                currentStep = stepIndex;
-            }
+          const nextStep = card.getAttribute("data-next");
+          const nextStepIndex = pages.findIndex((page) => page.id === nextStep);
+          if (nextStepIndex !== -1) {
+            currentStep = nextStepIndex;
             showPage(currentStep);
+          }
+        });
+      });
+
+      // Initialize the first page based on the URL
+      function initializeStepFromURL() {
+        const hash = window.location.hash.substring(1); // Remove the "#" character
+        const stepIndex = pages.findIndex((page) => page.id === hash);
+        if (stepIndex !== -1) {
+          currentStep = stepIndex;
         }
+        showPage(currentStep);
+      }
 
-        // Load the appropriate step on page load
-        window.onload = initializeStepFromURL;
-
+      // Load the appropriate step on page load
+      window.onload = initializeStepFromURL;
     </script>
-</body>
-
+  </body>
 </html>
