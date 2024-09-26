@@ -32,6 +32,25 @@ p, h1, h2, h3, h4, h5 {
   margin-bottom: 0 !important;
 }
 
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
 .custom-close {
   position: absolute;
   top: -10px;
@@ -418,6 +437,97 @@ p, h1, h2, h3, h4, h5 {
     width: 44px !important;
   }
 
+  /* dashboard - required document */
+
+  .file-input-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    gap: 10px;
+}
+
+.file-status {
+    padding: 3px;
+    background-color: #FDC99A;
+    border-radius: 8px;
+    display: none; /* please change to none to make status dinamyc */
+    width: 10%;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #545454;
+    font-size: 12px;
+    text-align: center;
+}
+
+.file-status-review {
+  padding: 3px;
+  background-color: #FFF3B7;
+  border-radius: 8px;
+  /* display: none; please change to none to make status dinamyc */
+  width: 10%;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: #545454;
+  font-size: 12px;
+  text-align: center;
+}
+
+.file-status-invalid {
+  padding: 3px;
+  background-color: #FF5F5F;
+  border-radius: 8px;
+  /* display: none; please change to none to make status dinamyc */
+  width: 10%;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+.file-status-valid {
+  padding: 3px;
+  background-color: #ADFF9F;
+  border-radius: 8px;
+  /* display: none; please change to none to make status dinamyc */
+  width: 10%;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+.file-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 3px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    width: 35%;
+    font-family: "Work Sans", sans-serif;
+    color: #a3a3a3;
+    font-size: 12px;
+}
+
+.file-input:hover {
+    background-color: #f8f9fa;
+}
+
+.trash-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.file-icon {
+    display: block;
+}
+
+
 @media (min-width: 768px) {
 
   .icon {
@@ -516,6 +626,40 @@ p, h1, h2, h3, h4, h5 {
     padding: 0;
     border: 1px solid #407bff;
     width: 11rem;
+  }
+  
+  .tuition-status {
+    padding: 3px 16px;
+    background-color: #A3A3A3;
+    color: white;
+    border-radius: 14px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  hr.tuition-solid-step {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #FF5351;
+    width: 11rem;
+  }
+  
+  hr.tuition-dashed-step {
+    margin: 0;
+    padding: 0;
+    border: 1px dashed #FF5351;
+    width: 11rem;
+    opacity: 1;
+  }
+  
+  hr.tuition-done-step {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #FF5351;
+    width: 11rem;
+    opacity: 1;
   }
   
   .logout-button {
@@ -1207,14 +1351,15 @@ p, h1, h2, h3, h4, h5 {
     font-size: 12px;
     font-weight: 600;
     color: #112369;
+    letter-spacing: 0.75px;
   }
   
   .dashboard-subtitle {
     font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 500;
     color: #3c3c3c;
     font-size: 16px;
+    letter-spacing: 0.75px;
   }
   
   .dashboard-username {
@@ -1246,6 +1391,8 @@ p, h1, h2, h3, h4, h5 {
     color: #719dff;
     font-size: 14px !important;
     font-weight: 600;
+    padding: 2px 10px;
+    letter-spacing: 0.75px;
   }
   
   .card-dashboard {
@@ -1283,6 +1430,17 @@ p, h1, h2, h3, h4, h5 {
     font-size: 12px;
     padding: 0px 10px;
     background-color: #407bff;
+    color: white;
+    border-radius: 13px;
+    text-transform: uppercase;
+  }
+
+  .onreview-btn {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0px 10px;
+    background-color: #FFC10E;
     color: white;
     border-radius: 13px;
     text-transform: uppercase;

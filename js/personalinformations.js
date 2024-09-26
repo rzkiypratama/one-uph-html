@@ -26,11 +26,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-const tabs = ['tab1-tab', 'tab2-tab', 'tab3-tab', 'tab4-tab']; // Daftar ID tabs
+const tabs = ['tab1-tab', 'tab2-tab', 'tab3-tab'];
 let currentTabIndex = 0;
 
 const backButton = document.getElementById('backButton');
 const nextButton = document.querySelector('.danger-button');
+
+// Fungsi untuk mengupdate tombol Next dan Back
+function updateButtons() {
+    // Jika di tab pertama, tombol Back membawa ke halaman sebelumnya
+    if (currentTabIndex === 0) {
+        backButton.innerText = 'Back';
+    } else {
+        backButton.innerText = 'Previous';
+    }
+
+    // Jika di tab terakhir, tombol Next menjadi Submit
+    if (currentTabIndex === tabs.length - 1) {
+        nextButton.innerText = 'Save Data & Continue';
+    } else {
+        nextButton.innerText = 'Continue';
+    }
+}
 
 // Event listener untuk tombol Back
 backButton.addEventListener('click', function () {
@@ -40,7 +57,6 @@ backButton.addEventListener('click', function () {
         previousTab.show();
         updateButtons();
     } else {
-        // Jika di tab pertama, kembali ke halaman sebelumnya
         window.location.href = '/dashboard/intakeyear.html';
     }
 });
@@ -55,11 +71,17 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
         nextTab.show();
         updateButtons();
     } else {
-        // jika perlu alert bisa digunakan
-        // alert('Form submitted!');
-        // Logika submit form
-        window.location.href = '/dashboard/familybackground.html';
+        alert('Form submitted!');
+        window.location.href = '/dashboard/educationbackground.html';
     }
+});
+
+// Event listener untuk tab klik langsung
+tabs.forEach((tabId, index) => {
+    document.getElementById(tabId).addEventListener('click', function () {
+        currentTabIndex = index;
+        updateButtons();
+    });
 });
 
 // Initial button state

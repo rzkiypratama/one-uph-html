@@ -61,17 +61,6 @@
             <div>
                 <div class="d-flex gap-2 mb-3">
                     <p class="m-0 step-title">03</p>
-                    <p class="m-0 step-subtitle w-25">Family Background</p>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                    <img src="/assets/circle-done.png" alt="step" class="step-icon">
-                    <hr class="done-step">
-                </div>
-            </div>
-
-            <div>
-                <div class="d-flex gap-2 mb-3">
-                    <p class="m-0 step-title">04</p>
                     <p class="m-0 step-subtitle w-25">Education Information</p>
                 </div>
                 <div class="d-flex align-items-center gap-2">
@@ -82,7 +71,7 @@
 
             <div>
                 <div class="d-flex gap-2 mb-3">
-                    <p class="m-0 step-title">05</p>
+                    <p class="m-0 step-title">04</p>
                     <p class="m-0 step-subtitle w-25">Entry Option</p>
                 </div>
                 <div class="d-flex align-items-center gap-2">
@@ -93,15 +82,24 @@
 
             <div>
                 <div class="d-flex gap-2 mb-3">
-                    <p class="m-0 step-title">06</p>
-                    <p class="m-0 step-subtitle w-50">Review & Payment</p>
+                    <p class="m-0 step-title">05</p>
+                    <p class="m-0 step-subtitle w-25">Review & Payment</p>
                 </div>
                 <div class="d-flex align-items-center gap-2">
                     <img src="/assets/circle-bold.png" alt="step" class="step-icon">
-                    <!-- <hr class="solid-step"> -->
+                    <hr class="solid-step">
                 </div>
             </div>
 
+            <div>
+                <div class="d-flex gap-2 mb-3">
+                    <p class="m-0 step-title">06</p>
+                    <p class="m-0 step-subtitle w-50">Required Documents</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/assets/circle-normal.png" alt="step" class="step-icon">
+                </div>
+            </div>
         </div>
 
         <!-- Tabs & Form -->
@@ -424,7 +422,7 @@
 
         document.getElementById('nextStepPayment').addEventListener('click', function (event) {
             event.preventDefault();
-            window.location.href = '/dashboard/applicationstatus.html';
+            window.location.href = '/dashboard/requireddocument.html';
         })
     </script>
     <script src="/js/reviewpayment.js"></script>
