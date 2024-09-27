@@ -145,6 +145,69 @@ h5 {
   color: white;
 }
 
+/* tabs styling start */
+.tab-icon {
+  width: 37px;
+  height: 41px;
+  margin-right: 8px;
+}
+
+.tabs-header {
+  background-color: #bcd1ff;
+}
+
+.tabs-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #112369;
+  font-size: 16px;
+}
+
+.tabs-subtitle {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #5c5c5c;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.card-header-tabs .nav-link.active {
+  background-color: #bcd1ff !important;
+  border: none;
+  border-bottom: 2px solid #0051ff;
+  border-radius: 0;
+  color: #0051ff;
+}
+
+.step-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.step-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #4a4a4a;
+  font-size: 24px;
+}
+
+.step-subtitle {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #898989;
+  font-size: 12px;
+  line-height: normal;
+}
+
+.nav-item {
+  padding-right: 15px !important;
+}
+/* tabs styling ends */
+
 /* nationality mobile */
 
 .left-content p {
