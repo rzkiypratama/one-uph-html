@@ -208,6 +208,45 @@ h5 {
 }
 /* tabs styling ends */
 
+/* LOGINPAGE */
+
+.eye-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.btn-signin {
+  background-color: #407bff;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 0px;
+}
+
+.btn-signin:hover {
+  background-color: #407bff;
+  color: #fff;
+}
+
+a.forgot-password {
+  font-family: "Work Sans", sans-serif;
+  color: #a3a3a3;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.register {
+  font-family: "Work Sans", sans-serif;
+  color: #a3a3a3;
+  font-size: 14px;
+}
+.register-link {
+  text-decoration: underline;
+  color: #a3a3a3;
+  font-weight: 600;
+}
+
 /* nationality mobile */
 
 .left-content p {
@@ -594,6 +633,10 @@ p.form-label-review {
 
 .file-icon {
   display: block;
+}
+
+.btn-sign {
+  padding-top: 2.3rem;
 }
 
 @media (min-width: 768px) {
@@ -1092,45 +1135,6 @@ p.form-label-review {
   .check-icon {
     height: 44px !important;
     width: 44px !important;
-  }
-
-  /* LOGINPAGE */
-
-  .eye-icon {
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
-
-  .btn-signin {
-    background-color: #407bff;
-    color: #fff;
-    font-weight: 600;
-    padding: 8px 0px;
-  }
-
-  .btn-signin:hover {
-    background-color: #407bff;
-    color: #fff;
-  }
-
-  a.forgot-password {
-    font-family: "Work Sans", sans-serif;
-    color: #a3a3a3;
-    font-size: 12px;
-    text-decoration: underline;
-  }
-
-  .register {
-    font-family: "Work Sans", sans-serif;
-    color: #a3a3a3;
-    font-size: 14px;
-  }
-  .register-link {
-    text-decoration: underline;
-    color: #a3a3a3;
-    font-weight: 600;
   }
 
   /* intakeyear.html */
