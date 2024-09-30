@@ -13,54 +13,70 @@
       <img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
       <div class="d-flex gap-3 align-items-center">
         <span class="logout-button d-flex align-items-center gap-2">
-          <p class="m-0">logout</p>
+          <p class="m-0 m-0 d-md-block d-none">logout</p>
           <img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon" />
         </span>
         <img src="/assets/bells.png" alt="notification icon" class="notification-icon" />
       </div>
     </div>
 
-    <div class="p-5 rounded-3 bg-white dashboard-container">
+    <!-- mobile layout -->
+    <div class="d-md-none d-block mb-3 px-2">
+      <p class="text-capitalize m-0 dashboard-welcome">welcome</p>
+      <h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
+      <span class="d-flex justify-content-between align-items-center">
+        <p class="text-uppercase dashboard-id">ID #123456</p>
+        <button type="button" class="btn btn-outline-primary dashboard-edit">edit profile</button>
+      </span>
+    </div>
+    <!-- mobile layout -->
+
+    <div class="p-3 p-md-5 rounded-3 bg-white dashboard-container">
       <div class="d-flex justify-content-between">
-        <div class="w-100 pe-4">
-          <img src="/assets/idcard.png" alt="badge-id" class="badge-icon" />
-          <p class="text-capitalize m-0 dashboard-welcome pt-2">welcome</p>
-          <h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
-          <span class="d-flex justify-content-between align-items-center">
-            <p class="text-uppercase dashboard-id">ID #123456</p>
-          </span>
-
-          <hr class="full-width-hr-wrapper-form" />
-
-          <div class="row mb-4 pt-2">
-            <span class="col-md-4">
-              <p class="m-0 text-capitalize dashboard-title">program</p>
-              <p class="m-0 text-capitalize dashboard-subtitle">Architecture</p>
-            </span>
-
-            <span class="col-md-8">
-              <p class="m-0 text-capitalize dashboard-title">Entry Option</p>
-              <p class="m-0 text-capitalize dashboard-subtitle">Regular Application</p>
+        <div class="w-100 pe-md-4">
+          <!-- desktop layout -->
+          <div class="d-none d-md-block">
+            <img src="/assets/idcard.png" alt="badge-id" class="badge-icon" />
+            <p class="text-capitalize m-0 dashboard-welcome pt-2">welcome</p>
+            <h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
+            <span class="d-flex justify-content-between align-items-center">
+              <p class="text-uppercase dashboard-id">ID #123456</p>
             </span>
           </div>
 
-          <div class="row">
-            <span class="col-md-4">
-              <p class="m-0 text-capitalize dashboard-title">Campus</p>
-              <p class="m-0 text-capitalize dashboard-subtitle">Lippo Village Campus</p>
-            </span>
+          <hr class="full-width-hr-wrapper-form d-none d-md-block" />
 
-            <span class="col-md-8">
-              <p class="m-0 text-capitalize dashboard-title">Entry Type</p>
-              <p class="m-0 text-capitalize dashboard-subtitle">Direct Admission</p>
-            </span>
+          <div class="d-none d-md-block">
+            <div class="row mb-4 pt-2">
+              <span class="col-md-4">
+                <p class="m-0 text-capitalize dashboard-title">program</p>
+                <p class="m-0 text-capitalize dashboard-subtitle">Architecture</p>
+              </span>
+
+              <span class="col-md-8">
+                <p class="m-0 text-capitalize dashboard-title">Entry Option</p>
+                <p class="m-0 text-capitalize dashboard-subtitle">Regular Application</p>
+              </span>
+            </div>
+
+            <div class="row">
+              <span class="col-md-4">
+                <p class="m-0 text-capitalize dashboard-title">Campus</p>
+                <p class="m-0 text-capitalize dashboard-subtitle">Lippo Village Campus</p>
+              </span>
+
+              <span class="col-md-8">
+                <p class="m-0 text-capitalize dashboard-title">Entry Type</p>
+                <p class="m-0 text-capitalize dashboard-subtitle">Direct Admission</p>
+              </span>
+            </div>
           </div>
 
-          <hr class="full-width-hr-wrapper-form" />
+          <hr class="full-width-hr-wrapper-form d-none d-md-block" />
 
-          <p class="text-capitalize m-0 dashboard-bottom-title mb-3">application status</p>
+          <p class="text-capitalize m-0 dashboard-bottom-title mb-3 d-none d-md-block">application status</p>
 
-          <div class="card p-3 shadow-sm border-0 rounded-3 bg-white">
+          <div class="card p-3 shadow-sm border-0 rounded-3 bg-white d-none d-md-block">
             <div class="d-flex justify-content-between align-items-center">
               <p class="m-0 row-title">Architecture</p>
               <p class="onreview-btn">on review</p>
@@ -74,9 +90,86 @@
               <p class="m-0 tabs-subtitle">Form #9812739817283</p>
             </div>
           </div>
+          <!-- desktop layout -->
+
+          <!-- mobile layout start -->
+          <div class="mobile-dashboard p-4 rounded-4 d-md-none">
+            <img src="/assets/togas.png" alt="togas" class="togas-icon" />
+            <p class="title-dashboard-mobile">Hello World!</p>
+            <p class="subtitle-dashboard-mobile">This is your <strong>Student Online Application Account.</strong> You can submit a new application from here.</p>
+            <button type="button" class="text-capitalize btn btn-danger w-100 border-0 dashboard-button mt-3" data-bs-toggle="modal" data-bs-target="#ecodeModal">buy new form</button>
+          </div>
+
+          <hr class="full-width-hr-wrapper-form d-md-none" />
+
+          <!-- mobile collapse start -->
+          <div class="d-md-none">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Student Informations</button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="row pt-2">
+                      <span class="col-md-4 mb-2">
+                        <p class="m-0 text-capitalize dashboard-title">program</p>
+                        <p class="m-0 text-capitalize dashboard-subtitle">Architecture</p>
+                      </span>
+
+                      <span class="col-md-4 mb-2">
+                        <p class="m-0 text-capitalize dashboard-title">Entry Option</p>
+                        <p class="m-0 text-capitalize dashboard-subtitle">Regular Application</p>
+                      </span>
+                    </div>
+
+                    <div class="row">
+                      <span class="col-md-4 mb-2">
+                        <p class="m-0 text-capitalize dashboard-title">Campus</p>
+                        <p class="m-0 text-capitalize dashboard-subtitle">Lippo Village Campus</p>
+                      </span>
+
+                      <span class="col-md-4">
+                        <p class="m-0 text-capitalize dashboard-title">Entry Type</p>
+                        <p class="m-0 text-capitalize dashboard-subtitle">Direct Admission</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="full-width-hr-wrapper-form d-md-none" />
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Application Status</button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body px-0 pb-2">
+                    <div class="card p-3 shadow-sm border-0 rounded-3 bg-white">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="m-0 row-title">Architecture</p>
+                        <p class="onreview-btn">on review</p>
+                      </div>
+
+                      <div class="d-flex justify-content-between fst-italic">
+                        <p class="m-0 tabs-subtitle">Undergraduate (S1)</p>
+                      </div>
+
+                      <div class="d-flex gap-4">
+                        <p class="m-0 tabs-subtitle">Form #9812739817283</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- mobile collapse ends -->
+
+          <!-- mobile layout ends -->
         </div>
 
-        <div class="dashboard-box">
+        <div class="dashboard-box d-none d-md-block">
           <div class="card-dashboard border-0" style="background-image: url('/assets/student.jpeg'); height: 461px; width: 272px">
             <!-- Gradient Overlay -->
             <div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>
