@@ -971,7 +971,7 @@ input[type="radio"] {
   background-color: #ff5f5f;
   border-radius: 8px;
   /* display: none; please change to none to make status dinamyc */
-  width: 10%;
+  /* width: 10%; */
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   color: #fff;
@@ -984,7 +984,7 @@ input[type="radio"] {
   background-color: #adff9f;
   border-radius: 8px;
   /* display: none; please change to none to make status dinamyc */
-  width: 10%;
+  /* width: 10%; */
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   color: #545454;
@@ -1028,7 +1028,15 @@ input[type="radio"] {
   width: 100%;
 }
 
+.docs-title {
+  width: auto;
+}
+
 @media (min-width: 768px) {
+  .docs-title {
+    width: 50%;
+  }
+
   .file-input-row {
     display: flex;
     align-items: center;
