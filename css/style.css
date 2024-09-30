@@ -6,6 +6,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 body {
@@ -55,6 +56,194 @@ h5 {
 .spinner-border {
   width: 3rem;
   height: 3rem;
+}
+
+/* header */
+.logout-icon {
+  width: 22.5px;
+  height: 22.5px;
+  background-repeat: no-repeat;
+}
+
+.notification-icon {
+  width: 19px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.notification-icon:hover {
+  transform: rotate(30deg);
+}
+/* header ends */
+
+/* DASHBOARD */
+
+.mobile-dashboard {
+  background-color: #bcd1ff;
+  margin-top: 1rem;
+}
+
+.btn-collapse {
+  background-color: none;
+}
+
+.code-content {
+  width: auto;
+}
+
+.accordion-item,
+.accordion-button {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+}
+
+.dashboard-container {
+  border-radius: 25px 25px 0px 0px !important;
+  background-color: #eff4ff !important;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  height: 80vh;
+}
+
+.icon-form {
+  width: 70px;
+}
+
+.togas-icon {
+  float: right;
+  margin-top: -2.5rem;
+}
+
+.title-dashboard-mobile {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #112369;
+  font-size: 18px;
+  letter-spacing: 0.75p;
+}
+
+.subtitle-dashboard-mobile {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  color: #112369;
+  font-size: 14px;
+}
+
+.dashboard-welcome {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  font-size: 14px;
+}
+
+.dashboard-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #112369;
+  letter-spacing: 0.75px;
+}
+
+.dashboard-subtitle {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  color: #3c3c3c;
+  font-size: 16px;
+  letter-spacing: 0.75px;
+}
+
+.dashboard-username {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.75px;
+}
+
+.dashboard-id {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.dashboard-bottom-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #112369;
+  margin: 0;
+}
+
+.dashboard-edit {
+  border: none;
+  color: #fff;
+  font-size: 14px !important;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+}
+
+.card-dashboard {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05em;
+  background-size: cover;
+  transition: background-image 0.3s ease;
+  background-position: center;
+}
+
+.dashboard-button {
+  background-image: linear-gradient(to bottom, #ff5351, #ff7a78);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  transition: 0.2s ease-in;
+}
+
+.dashboard-button:hover {
+  transform: scale(1, 1.1);
+}
+
+.vertical-divider {
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  margin: auto -3rem !important;
+}
+
+.badge-icon {
+  width: 40px;
+}
+
+.admitted-btn {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0px 10px;
+  background-color: #407bff;
+  color: white;
+  border-radius: 13px;
+  text-transform: uppercase;
+}
+
+.onreview-btn {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0px 10px;
+  background-color: #ffc10e;
+  color: white;
+  border-radius: 13px;
+  text-transform: uppercase;
 }
 
 .custom-close {
@@ -173,12 +362,17 @@ h5 {
   font-style: italic;
 }
 
+.card-header-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-header-tabs .nav-link.active {
   background-color: #bcd1ff !important;
   border: none;
   border-bottom: 2px solid #0051ff;
   border-radius: 0;
-  color: #0051ff;
+  color: #003bbb;
 }
 
 .step-icon {
@@ -549,10 +743,12 @@ p.form-label-review {
 
 .file-input-row {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 1rem;
   gap: 10px;
+  overflow-x: scroll !important;
 }
 
 .file-status {
@@ -639,7 +835,330 @@ p.form-label-review {
   padding-top: 2.3rem;
 }
 
+.btn-danger {
+  width: 100%;
+}
+
+/* RADIO BUTTON */
+.radio-btn-group label {
+  cursor: pointer;
+  padding: 10px 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  color: #cacaca;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.radio-btn-group input[type="radio"] {
+  display: none;
+  color: #cacaca;
+}
+
+.radio-btn-group input[type="radio"]:checked + label {
+  background-color: #719dff;
+  border-color: #719dff;
+  color: white;
+}
+
+option.select-placeholder {
+  color: #cacaca !important;
+}
+
+.phone-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.phone-input-group select {
+  max-width: 60px;
+  border-radius: 0;
+  margin-right: 5px;
+}
+
+.phone-input-group input {
+  flex-grow: 1;
+  border-left: none;
+  border-radius: 0;
+}
+
+.phone-input-group .input-group-text {
+  border-right: none;
+}
+
+.vertical-hr {
+  border-left: 1px solid #ccc;
+  height: 100%;
+}
+
+.address-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.address-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.vertical-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  margin: -3rem auto !important;
+}
+
+.row-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #112369;
+  font-size: 16px;
+}
+
+.bank-option.selected {
+  border: 2px solid blue;
+}
+
+/* review and payment */
+
+.payment-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #4a4a4a;
+  font-size: 14px;
+}
+
+.payment-subtitle {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #4a4a4a;
+  font-size: 14px;
+}
+
+.payment-total-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #4a4a4a;
+  font-size: 18px;
+}
+
+.application-bg {
+  background-color: #c0d4ff20;
+}
+
+.payment-title-up {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #4a4a4a;
+  font-size: 10px;
+}
+
+.payment-details {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: underline;
+  color: #407bff;
+  font-size: 10px;
+}
+
+.payment-banks {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+.modal-dialog-payment,
+.modal-dialog-verify {
+  width: 400px;
+  border: none !important;
+}
+
+input[type="radio"] {
+  accent-color: #407bff;
+}
+
+.payment-background {
+  background-color: #f0f5ff;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-bottom: -1rem;
+}
+
+.payment-icon {
+  width: 38px !important;
+  height: 12px !important;
+  background-size: cover;
+}
+
+.verify-icon {
+  width: 63px !important;
+  height: auto !important;
+  background-size: cover;
+}
+
+.verify-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #112369;
+  font-size: 14px;
+}
+
+.verify-subtitle {
+  font-family: "Work Sans", sans-serif;
+  color: #a3a3a3;
+  font-size: 14px;
+  font-weight: medium;
+}
+
+.success-modal-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #5c5c5c;
+  font-size: 20px;
+}
+
 @media (min-width: 768px) {
+  .file-input-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  .btn-danger {
+    width: auto;
+  }
+
+  .card-header-tabs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* navbar */
+  .card-header-tabs .nav-link.active {
+    background-color: #bcd1ff !important;
+    border: none;
+    border-bottom: 2px solid #0051ff;
+    border-radius: 0;
+    color: #0051ff;
+  }
+
+  /* DASHBOARD */
+
+  .dashboard-container {
+    border-radius: 12px !important;
+    background-color: #eff4ff !important;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    height: auto;
+  }
+
+  .code-content {
+    width: 50%;
+  }
+
+  .icon-form {
+    width: 70px;
+  }
+
+  .dashboard-welcome {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #112369;
+    font-size: 20px;
+  }
+
+  .dashboard-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #112369;
+    letter-spacing: 0.75px;
+  }
+
+  .dashboard-subtitle {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    color: #3c3c3c;
+    font-size: 16px;
+    letter-spacing: 0.75px;
+  }
+
+  .dashboard-username {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #112369;
+    margin: 0;
+  }
+
+  .dashboard-id {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7aa3ff;
+    margin: 0;
+  }
+
+  .dashboard-bottom-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #112369;
+    margin: 0;
+  }
+
+  .dashboard-edit {
+    border: 1px solid #7aa3ff !important;
+    color: #719dff;
+    font-size: 14px !important;
+    font-weight: 600;
+    padding: 2px 10px;
+    letter-spacing: 0.75px;
+  }
+
+  .card-dashboard {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    background-position: center;
+  }
+
+  .dashboard-button {
+    background-image: linear-gradient(to bottom, #ff5351, #ff7a78);
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    transition: 0.2s ease-in;
+  }
+
+  .dashboard-button:hover {
+    transform: scale(1, 1.1);
+  }
+
   .icon {
     width: 120px;
     height: 96px;
@@ -1197,323 +1716,6 @@ p.form-label-review {
 
   .nav-item {
     padding-right: 15px !important;
-  }
-
-  /* RADIO BUTTON */
-  .radio-btn-group label {
-    cursor: pointer;
-    padding: 10px 50px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    color: #cacaca;
-    font-weight: 600;
-    font-size: 12px;
-  }
-
-  .radio-btn-group input[type="radio"] {
-    display: none;
-    color: #cacaca;
-  }
-
-  .radio-btn-group input[type="radio"]:checked + label {
-    background-color: #719dff;
-    border-color: #719dff;
-    color: white;
-  }
-
-  option.select-placeholder {
-    color: #cacaca !important;
-  }
-
-  .phone-input-group {
-    display: flex;
-    align-items: center;
-  }
-
-  .phone-input-group select {
-    max-width: 60px;
-    border-radius: 0;
-    margin-right: 5px;
-  }
-
-  .phone-input-group input {
-    flex-grow: 1;
-    border-left: none;
-    border-radius: 0;
-  }
-
-  .phone-input-group .input-group-text {
-    border-right: none;
-  }
-
-  .vertical-hr {
-    border-left: 1px solid #ccc;
-    height: 100%;
-  }
-
-  .address-container {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-  }
-
-  .address-card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-  }
-
-  .vertical-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-  }
-
-  .row-title {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #112369;
-    font-size: 16px;
-  }
-
-  .bank-option.selected {
-    border: 2px solid blue;
-  }
-
-  /* review and payment */
-
-  .payment-title {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #4a4a4a;
-    font-size: 14px;
-  }
-
-  .payment-subtitle {
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #4a4a4a;
-    font-size: 14px;
-  }
-
-  .payment-total-title {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #4a4a4a;
-    font-size: 18px;
-  }
-
-  .application-bg {
-    background-color: #c0d4ff20;
-  }
-
-  .payment-title-up {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #4a4a4a;
-    font-size: 10px;
-  }
-
-  .payment-details {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    text-decoration: underline;
-    color: #407bff;
-    font-size: 10px;
-  }
-
-  .payment-banks {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #4a4a4a;
-    font-size: 16px;
-  }
-
-  .modal-dialog-payment,
-  .modal-dialog-verify {
-    width: 400px;
-    border: none !important;
-  }
-
-  input[type="radio"] {
-    accent-color: #407bff;
-  }
-
-  .payment-background {
-    background-color: #f0f5ff;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    margin-bottom: -1rem;
-  }
-
-  .payment-icon {
-    width: 38px !important;
-    height: 12px !important;
-    background-size: cover;
-  }
-
-  .verify-icon {
-    width: 63px !important;
-    height: auto !important;
-    background-size: cover;
-  }
-
-  .verify-title {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #112369;
-    font-size: 14px;
-  }
-
-  .verify-subtitle {
-    font-family: "Work Sans", sans-serif;
-    color: #a3a3a3;
-    font-size: 14px;
-    font-weight: medium;
-  }
-
-  .success-modal-title {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #5c5c5c;
-    font-size: 20px;
-  }
-
-  /* DASHBOARD */
-
-  .dashboard-container {
-    width: 90%;
-    height: 571px;
-    border-radius: 12px;
-    background-color: #eff4ff !important;
-  }
-
-  .dashboard-box {
-    margin-right: -6rem;
-    margin-top: 0.5rem;
-  }
-
-  .icon-form {
-    width: 70px;
-  }
-
-  .dashboard-welcome {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #112369;
-    font-size: 20px;
-  }
-
-  .dashboard-title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: #112369;
-    letter-spacing: 0.75px;
-  }
-
-  .dashboard-subtitle {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 500;
-    color: #3c3c3c;
-    font-size: 16px;
-    letter-spacing: 0.75px;
-  }
-
-  .dashboard-username {
-    font-family: "Montserrat", sans-serif;
-    font-size: 36px;
-    font-weight: 600;
-    color: #112369;
-    margin: 0;
-  }
-
-  .dashboard-id {
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: #7aa3ff;
-    margin: 0;
-  }
-
-  .dashboard-bottom-title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #112369;
-    margin: 0;
-  }
-
-  .dashboard-edit {
-    border: 1px solid #7aa3ff !important;
-    color: #719dff;
-    font-size: 14px !important;
-    font-weight: 600;
-    padding: 2px 10px;
-    letter-spacing: 0.75px;
-  }
-
-  .card-dashboard {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.05em;
-    background-size: cover;
-    transition: background-image 0.3s ease;
-    background-position: center;
-  }
-
-  .dashboard-button {
-    background-image: linear-gradient(to bottom, #ff5351, #ff7a78);
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 16px;
-    transition: 0.2s ease-in;
-  }
-
-  .dashboard-button:hover {
-    transform: scale(1, 1.1);
-  }
-
-  .badge-icon {
-    width: 40px;
-  }
-
-  .admitted-btn {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    padding: 0px 10px;
-    background-color: #407bff;
-    color: white;
-    border-radius: 13px;
-    text-transform: uppercase;
-  }
-
-  .onreview-btn {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    padding: 0px 10px;
-    background-color: #ffc10e;
-    color: white;
-    border-radius: 13px;
-    text-transform: uppercase;
   }
 }
 
