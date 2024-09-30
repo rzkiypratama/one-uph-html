@@ -743,19 +743,18 @@ p.form-label-review {
 
 .file-input-row {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 1rem;
   gap: 10px;
 }
 
 .file-status {
-  padding: 3px;
+  padding: 3px 10px;
   background-color: #fdc99a;
   border-radius: 8px;
   display: none; /* please change to none to make status dinamyc */
-  width: 10%;
+  /* width: 10%; */
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   color: #545454;
@@ -764,11 +763,11 @@ p.form-label-review {
 }
 
 .file-status-review {
-  padding: 3px;
+  padding: 3px 10px;
   background-color: #fff3b7;
   border-radius: 8px;
   /* display: none; please change to none to make status dinamyc */
-  width: 10%;
+  /* width: 10%; */
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   color: #545454;
@@ -777,7 +776,7 @@ p.form-label-review {
 }
 
 .file-status-invalid {
-  padding: 3px;
+  padding: 3px 10px;
   background-color: #ff5f5f;
   border-radius: 8px;
   /* display: none; please change to none to make status dinamyc */
@@ -790,7 +789,7 @@ p.form-label-review {
 }
 
 .file-status-valid {
-  padding: 3px;
+  padding: 3px 10px;
   background-color: #adff9f;
   border-radius: 8px;
   /* display: none; please change to none to make status dinamyc */
@@ -811,7 +810,7 @@ p.form-label-review {
   padding: 3px;
   border: 1px dashed #ddd;
   border-radius: 8px;
-  width: 35%;
+  /* width: 35%; */
   font-family: "Work Sans", sans-serif;
   color: #a3a3a3;
   font-size: 12px;
@@ -846,6 +845,21 @@ p.form-label-review {
     margin-bottom: 1rem;
     gap: 10px;
     flex-direction: row;
+  }
+
+  .file-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 3px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    width: 35%;
+    font-family: "Work Sans", sans-serif;
+    color: #a3a3a3;
+    font-size: 12px;
   }
 
   .btn-danger {
