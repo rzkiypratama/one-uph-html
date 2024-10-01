@@ -1747,6 +1747,14 @@ input[type="radio"] {
   animation-duration: 0.5s;
 }
 
+.fade-in-bottom {
+  opacity: 1;
+  animation-name: fadeBottomOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
 .fade-in-right-delayed {
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -1760,6 +1768,17 @@ input[type="radio"] {
   0% {
     opacity: 0;
     transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeBottomOpacity {
+  0% {
+    opacity: 0;
+    transform: translatey(5%);
   }
   100% {
     opacity: 1;
