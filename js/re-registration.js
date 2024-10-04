@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const nationality = localStorage.getItem("nationality");
+  // Ambil nationality dari localStorage, jika tidak ada set default 'national'
+  let nationality = localStorage.getItem("nationality") || "national";
+
+  // Jika belum ada di localStorage, set default nationality sebagai 'national'
+  if (!localStorage.getItem("nationality")) {
+    localStorage.setItem("nationality", "national");
+  }
+
+  // Menampilkan atau menyembunyikan form berdasarkan nationality
   const nationalForm = document.getElementById("national-form");
   const internationalForm = document.getElementById("international-form");
 
@@ -13,7 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const nationality = localStorage.getItem("nationality");
+  // Ambil nationality dari localStorage, jika tidak ada set default 'national'
+  let nationality = localStorage.getItem("nationality") || "national";
+
+  // Menampilkan atau menyembunyikan address berdasarkan nationality
   const nationalAddress = document.getElementById("national-address");
   const internationalAddress = document.getElementById("international-address");
 
