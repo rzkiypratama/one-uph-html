@@ -235,6 +235,17 @@ h5 {
   text-transform: uppercase;
 }
 
+.commited-btn {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0px 10px;
+  background-color: #11c9a8;
+  color: white;
+  border-radius: 13px;
+  text-transform: uppercase;
+}
+
 .onreview-btn {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
@@ -1125,6 +1136,10 @@ input[type="radio"] {
 
 .notification-card p:last-child {
   border-bottom: none;
+}
+
+.grand-total {
+  width: 79.5%;
 }
 
 /* scrollbar */

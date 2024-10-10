@@ -82,7 +82,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     nextTab.show();
     updateButtons();
   } else {
-    alert("Form submitted!");
+    // alert("Form submitted!");
     window.location.href = "/tuition-fee/administration-documents.html";
   }
 });
