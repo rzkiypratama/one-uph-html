@@ -959,6 +959,19 @@ input[type="radio"] {
   gap: 10px;
 }
 
+.file-example {
+  padding: 3px 10px;
+  /* display: none; please change to none to make status dinamyc */
+  /* width: 10%; */
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #ff5351;
+  font-size: 12px;
+}
+
 .file-status {
   padding: 3px 10px;
   background-color: #fdc99a;
@@ -1017,7 +1030,7 @@ input[type="radio"] {
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  padding: 3px;
+  padding: 8px;
   border: 1px dashed #ddd;
   border-radius: 8px;
   /* width: 35%; */
@@ -1158,6 +1171,21 @@ input[type="radio"] {
 }
 
 @media (min-width: 768px) {
+  .file-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 3px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    /* width: 35%; */
+    font-family: "Work Sans", sans-serif;
+    color: #a3a3a3;
+    font-size: 12px;
+  }
+
   /* tabs */
   .card-header-tabs .nav-link.active {
     background-color: #bcd1ff !important;
