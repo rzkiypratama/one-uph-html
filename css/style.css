@@ -379,11 +379,12 @@ h5 {
 }
 
 .card-header-tabs .nav-link.active {
-  background-color: #bcd1ff !important;
+  background-color: #8db1ff !important;
   border: none;
   border-bottom: 2px solid #0051ff;
   border-radius: 0;
-  color: #003bbb;
+  color: #001748;
+  width: 100%;
 }
 
 .step-icon {
@@ -409,7 +410,7 @@ h5 {
 }
 
 .nav-item {
-  padding-right: 15px !important;
+  padding-right: 0px !important;
 }
 /* tabs styling ends */
 
@@ -1157,6 +1158,19 @@ input[type="radio"] {
 }
 
 @media (min-width: 768px) {
+  /* tabs */
+  .card-header-tabs .nav-link.active {
+    background-color: #bcd1ff !important;
+    border: none;
+    border-bottom: 2px solid #0051ff;
+    border-radius: 0;
+    color: #003bbb;
+  }
+
+  .nav-item {
+    padding-right: 15px !important;
+  }
+
   /* notification */
   .notification-card {
     position: absolute;
