@@ -960,7 +960,7 @@ input[type="radio"] {
 }
 
 .file-example {
-  padding: 3px 10px;
+  /* padding: 3px 10px; */
   /* display: none; please change to none to make status dinamyc */
   /* width: 10%; */
   font-family: "Work Sans", sans-serif;
