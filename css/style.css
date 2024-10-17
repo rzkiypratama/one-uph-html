@@ -1161,6 +1161,10 @@ input[type="radio"] {
   border-bottom: none;
 }
 
+.homepage-container {
+  height: 95vh;
+}
+
 /* .grand-total {
   width: 79.5%;
 } */
@@ -1666,6 +1670,7 @@ input[type="radio"] {
   /* index.html */
   .homepage-container {
     gap: 10rem !important;
+    height: auto;
   }
 
   .graduate-logo {
