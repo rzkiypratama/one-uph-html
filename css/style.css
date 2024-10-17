@@ -9,6 +9,11 @@
   transition: 0.3s;
 }
 
+html {
+  /* height: -webkit-fill-available; */
+  height: max-content;
+}
+
 body {
   background-image: url("/assets/bg-hero.webp");
   background-repeat: no-repeat;
@@ -284,6 +289,10 @@ h5 {
 
 .upper-content {
   height: 10%;
+}
+
+.upper-content-personalinformation {
+  height: 5%;
 }
 
 .middle-content {
@@ -1152,9 +1161,9 @@ input[type="radio"] {
   border-bottom: none;
 }
 
-.grand-total {
+/* .grand-total {
   width: 79.5%;
-}
+} */
 
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -1171,6 +1180,14 @@ input[type="radio"] {
 }
 
 @media (min-width: 768px) {
+  .upper-content {
+    height: 10%;
+  }
+
+  .grand-total {
+    width: 79.5%;
+  }
+
   .file-input {
     display: flex;
     justify-content: space-between;
@@ -1707,6 +1724,16 @@ input[type="radio"] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    height: max-content;
+  }
+
+  /* field study */
+
+  .fieldstudy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
     gap: 10px 10px;
     height: max-content;
   }
